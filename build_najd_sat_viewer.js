@@ -744,8 +744,8 @@ const htmlContent = `<!DOCTYPE html>
     <footer id="bottom-panel">
         <div class="controls-group">
             <button id="btn-play" class="ctrl-btn" title="Play/Pause">
-                <svg id="play-icon" viewBox="0 0 24 24" style="display:none;"><path d="M8 5v14l11-7z"/></svg>
-                <svg id="pause-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg id="pause-icon" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
             </button>
             <button id="btn-prev" class="ctrl-btn" title="Previous Frame">
                 <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
@@ -770,7 +770,7 @@ const htmlContent = `<!DOCTYPE html>
     const nonaData = ${JSON.stringify(nonaData)};
     let currentSat = 'sat1';
     let currentIndex = (nonaData.sat1 && nonaData.sat1.length > 0) ? nonaData.sat1.length - 1 : 0;
-    let isPlaying = true;
+    let isPlaying = false; // الوضع الافتراضي متوقف عند آخر تحديث حي
     let playInterval = null;
     let speeds = [400, 200, 100];
     let speedLabels = ['1.0X', '2.0X', '3.0X'];
@@ -843,9 +843,47 @@ const htmlContent = `<!DOCTYPE html>
             }
 
             showFrame(currentIndex);
+            preloadSatImages(currentSat); // تفعيل الكاش الفوري للقمر الجديد
             dropdown.classList.remove('show');
         });
     });
+
+    // ==========================================
+    // محرك التحميل المسبق الصامت الفائق (Instant Cache Engine)
+    // ==========================================
+    const imageCache = {};
+
+    function preloadSatImages(satKey) {
+        const list = nonaData[satKey] || [];
+        if (!list || list.length === 0) return;
+        if (!imageCache[satKey]) imageCache[satKey] = {};
+
+        // الأولوية 1: تحميل أحدث 15 صورة فوراً لتكون الحركة سلسة كالبرق
+        for (let i = list.length - 1; i >= Math.max(0, list.length - 15); i--) {
+            const f = list[i].file;
+            if (!imageCache[satKey][f]) {
+                const img = new Image();
+                img.src = f;
+                imageCache[satKey][f] = img;
+            }
+        }
+
+        // الأولوية 2: تحميل باقي صور الـ 12 ساعة في الخفاء بتتابع هادئ
+        let remainingIdx = list.length - 16;
+        const bgTimer = setInterval(() => {
+            if (remainingIdx < 0) {
+                clearInterval(bgTimer);
+                return;
+            }
+            const f = list[remainingIdx].file;
+            if (!imageCache[satKey][f]) {
+                const img = new Image();
+                img.src = f;
+                imageCache[satKey][f] = img;
+            }
+            remainingIdx--;
+        }, 150);
+    }
 
     function showFrame(index) {
         const list = nonaData[currentSat] || [];
@@ -924,9 +962,9 @@ const htmlContent = `<!DOCTYPE html>
         }
     });
 
-    // Start
+    // Start at latest frame without auto-play
     showFrame(currentIndex);
-    startLoop();
+    preloadSatImages(currentSat); // بدء التحميل المسبق الصامت للقمر الافتراضي فور فتح الصفحة
 
     // ==========================================
     // AUTO-POLLING: فحص وتحديث الفريمات الجديدة تلقائياً بسرعة فائقة كل 15 ثانية

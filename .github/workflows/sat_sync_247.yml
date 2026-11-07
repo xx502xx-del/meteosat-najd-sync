@@ -2,14 +2,13 @@ name: 🛰️ Meteosat Najd 24/7 Cloud Auto-Sync
 
 on:
   schedule:
-    # يعمل تلقائياً كل 10 دقائق على مدار الساعة في سيرفرات GitHub السحابية
     - cron: '*/10 * * * *'
-  workflow_dispatch: # يتيح لك تشغيله يدوياً بأي وقت
+  workflow_dispatch:
 
 jobs:
   sync_and_deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
 
     steps:
       - name: 📥 جلب كود المشروع
@@ -20,9 +19,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: 📦 تثبيت حزم المتصفح Puppeteer
+      - name: 📦 تثبيت Chromium الكامل مع Puppeteer
         run: |
           npm init -y
+          npx @puppeteer/browsers install chrome@stable
           npm install puppeteer
 
       - name: 🌐 تنفيذ السحب السحابي وتحديث Cloudflare

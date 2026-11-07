@@ -580,10 +580,19 @@ const htmlContent = `<!DOCTYPE html>
                 padding: 0 12px;
             }
 
+            body {
+                overflow-x: hidden;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+            }
+
             #map-container {
-                top: 48px;
-                bottom: auto;
                 position: relative;
+                top: 0;
+                margin-top: 52px;
                 padding: 6px 12px 0 12px;
                 display: flex;
                 flex-direction: column;
@@ -591,6 +600,7 @@ const htmlContent = `<!DOCTYPE html>
                 justify-content: flex-start;
                 box-sizing: border-box;
                 width: 100%;
+                flex-shrink: 0;
             }
 
             #mobile-date-banner {
@@ -629,26 +639,27 @@ const htmlContent = `<!DOCTYPE html>
 
             #satellite-image {
                 max-width: 100%;
-                max-height: calc(100vh - 185px);
+                max-height: calc(100vh - 240px);
                 width: auto;
                 height: auto;
                 object-fit: scale-down;
                 border-radius: 10px;
                 box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(56, 189, 248, 0.12);
                 box-sizing: border-box;
+                display: block;
             }
 
-            /* الشريط الزجاجي المرفوع أسفل صورة القمر مباشرة */
+            /* الشريط الزجاجي أسفل صورة القمر بمسافة سطرين واضحة ومستقلة */
             #bottom-panel {
                 position: relative;
-                margin: 10px 12px 16px 12px;
+                margin: 22px 12px 28px 12px; /* مسافة سطرين (22px) تفصله بوضوح عن أسفل الصورة */
                 height: auto;
-                background: rgba(17, 21, 30, 0.82);
+                background: rgba(17, 21, 30, 0.85);
                 backdrop-filter: blur(16px);
                 -webkit-backdrop-filter: blur(16px);
                 border: 1px solid rgba(56, 189, 248, 0.25);
                 border-radius: 16px;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 15px rgba(56, 189, 248, 0.1);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.75), 0 0 15px rgba(56, 189, 248, 0.1);
                 flex-direction: column;
                 justify-content: center;
                 align-items: stretch;
@@ -656,7 +667,9 @@ const htmlContent = `<!DOCTYPE html>
                 gap: 8px;
                 z-index: 40;
                 width: calc(100% - 24px);
+                max-width: 440px;
                 box-sizing: border-box;
+                flex-shrink: 0;
             }
 
             .controls-group {

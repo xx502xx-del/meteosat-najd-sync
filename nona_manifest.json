@@ -1,326 +1,6 @@
 {
   "sat1": [
     {
-      "file": "satellite_images/sat_2026_11_06_08_50_15518_1427.jpg",
-      "time": "11:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_09_00_15518_1427.jpg",
-      "time": "12:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_09_10_15518_1427.jpg",
-      "time": "12:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_09_20_15518_1427.jpg",
-      "time": "12:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_09_30_15518_1427.jpg",
-      "time": "12:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_09_40_15518_1427.jpg",
-      "time": "12:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_09_50_15518_1427.jpg",
-      "time": "12:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_10_00_15518_1427.jpg",
-      "time": "13:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_10_10_15518_1427.jpg",
-      "time": "13:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_10_20_15518_1427.jpg",
-      "time": "13:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_10_30_15518_1427.jpg",
-      "time": "13:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_10_40_15518_1427.jpg",
-      "time": "13:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_10_50_15518_1427.jpg",
-      "time": "13:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_11_00_15518_1427.jpg",
-      "time": "14:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_11_10_15518_1427.jpg",
-      "time": "14:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_11_20_15518_1427.jpg",
-      "time": "14:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_11_30_15518_1427.jpg",
-      "time": "14:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_11_40_15518_1427.jpg",
-      "time": "14:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_11_50_15518_1427.jpg",
-      "time": "14:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_12_00_15518_1427.jpg",
-      "time": "15:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_12_10_15518_1427.jpg",
-      "time": "15:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_12_20_15518_1427.jpg",
-      "time": "15:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_12_30_15518_1427.jpg",
-      "time": "15:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_12_40_15518_1427.jpg",
-      "time": "15:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_12_50_15518_1427.jpg",
-      "time": "15:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_13_00_15518_1427.jpg",
-      "time": "16:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_13_10_15518_1427.jpg",
-      "time": "16:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_13_20_15518_1427.jpg",
-      "time": "16:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_13_30_15518_1427.jpg",
-      "time": "16:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_13_40_15518_1427.jpg",
-      "time": "16:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_13_50_15518_1427.jpg",
-      "time": "16:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_14_00_15518_1427.jpg",
-      "time": "17:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_14_10_15518_1427.jpg",
-      "time": "17:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_14_20_15518_1427.jpg",
-      "time": "17:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_14_30_15518_1427.jpg",
-      "time": "17:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_14_40_15518_1427.jpg",
-      "time": "17:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_14_50_15518_1427.jpg",
-      "time": "17:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_15_00_15518_1427.jpg",
-      "time": "18:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_15_10_15518_1427.jpg",
-      "time": "18:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_15_20_15518_1427.jpg",
-      "time": "18:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_15_30_15518_1427.jpg",
-      "time": "18:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_15_40_15518_1427.jpg",
-      "time": "18:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_15_50_15518_1427.jpg",
-      "time": "18:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_16_00_15518_1427.jpg",
-      "time": "19:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_16_10_15518_1427.jpg",
-      "time": "19:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_16_20_15518_1427.jpg",
-      "time": "19:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_16_30_15518_1427.jpg",
-      "time": "19:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_16_40_15518_1427.jpg",
-      "time": "19:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_16_50_15518_1427.jpg",
-      "time": "19:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_17_00_15518_1427.jpg",
-      "time": "20:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_17_10_15518_1427.jpg",
-      "time": "20:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_17_20_15518_1427.jpg",
-      "time": "20:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_17_30_15518_1427.jpg",
-      "time": "20:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_17_40_15518_1427.jpg",
-      "time": "20:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_17_50_15518_1427.jpg",
-      "time": "20:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_18_00_15518_1427.jpg",
-      "time": "21:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_18_10_15518_1427.jpg",
-      "time": "21:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_18_20_15518_1427.jpg",
-      "time": "21:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_18_30_15518_1427.jpg",
-      "time": "21:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_18_40_15518_1427.jpg",
-      "time": "21:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_18_50_15518_1427.jpg",
-      "time": "21:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_19_00_15518_1427.jpg",
-      "time": "22:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_19_10_15518_1427.jpg",
-      "time": "22:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "satellite_images/sat_2026_11_06_19_20_15518_1427.jpg",
-      "time": "22:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
       "file": "satellite_images/sat_2026_11_06_19_30_15518_1427.jpg",
       "time": "22:30 KSA",
       "date": "2026/11/06"
@@ -539,234 +219,149 @@
       "file": "satellite_images/sat_2026_11_07_06_10_15518_1427.jpg",
       "time": "09:10 KSA",
       "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_06_20_15518_1427.jpg",
+      "time": "09:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_06_30_15518_1427.jpg",
+      "time": "09:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_07_00_15518_1427.jpg",
+      "time": "10:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_07_10_15518_1427.jpg",
+      "time": "10:10 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_07_20_15518_1427.jpg",
+      "time": "10:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_07_30_15518_1427.jpg",
+      "time": "10:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_07_40_15518_1427.jpg",
+      "time": "10:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_07_50_15518_1427.jpg",
+      "time": "10:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_08_00_15518_1427.jpg",
+      "time": "11:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_08_10_15518_1427.jpg",
+      "time": "11:10 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_08_20_15518_1427.jpg",
+      "time": "11:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_08_30_15518_1427.jpg",
+      "time": "11:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_08_40_15518_1427.jpg",
+      "time": "11:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_08_50_15518_1427.jpg",
+      "time": "11:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_09_00_15518_1427.jpg",
+      "time": "12:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_09_10_15518_1427.jpg",
+      "time": "12:10 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_09_20_15518_1427.jpg",
+      "time": "12:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_09_30_15518_1427.jpg",
+      "time": "12:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_09_40_15518_1427.jpg",
+      "time": "12:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_09_50_15518_1427.jpg",
+      "time": "12:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_10_00_15518_1427.jpg",
+      "time": "13:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_10_10_15518_1427.jpg",
+      "time": "13:10 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_10_20_15518_1427.jpg",
+      "time": "13:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_10_30_15518_1427.jpg",
+      "time": "13:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_10_40_15518_1427.jpg",
+      "time": "13:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_10_50_15518_1427.jpg",
+      "time": "13:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_11_00_15518_1427.jpg",
+      "time": "14:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "satellite_images/sat_2026_11_07_11_10_15518_1427.jpg",
+      "time": "14:10 KSA",
+      "date": "2026/11/07"
     }
   ],
   "sat2": [
-    {
-      "file": "sat2_images/sat_2026_11_06_08_50_15518_1432.jpg",
-      "time": "11:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_09_00_15518_1432.jpg",
-      "time": "12:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_09_10_15518_1432.jpg",
-      "time": "12:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_09_20_15518_1432.jpg",
-      "time": "12:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_09_30_15518_1432.jpg",
-      "time": "12:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_09_40_15518_1432.jpg",
-      "time": "12:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_09_50_15518_1432.jpg",
-      "time": "12:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_10_00_15518_1432.jpg",
-      "time": "13:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_10_10_15518_1432.jpg",
-      "time": "13:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_10_20_15518_1432.jpg",
-      "time": "13:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_10_30_15518_1432.jpg",
-      "time": "13:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_10_40_15518_1432.jpg",
-      "time": "13:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_10_50_15518_1432.jpg",
-      "time": "13:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_11_00_15518_1432.jpg",
-      "time": "14:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_11_10_15518_1432.jpg",
-      "time": "14:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_11_20_15518_1432.jpg",
-      "time": "14:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_11_30_15518_1432.jpg",
-      "time": "14:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_11_40_15518_1432.jpg",
-      "time": "14:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_11_50_15518_1432.jpg",
-      "time": "14:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_12_00_15518_1432.jpg",
-      "time": "15:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_12_10_15518_1432.jpg",
-      "time": "15:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_12_20_15518_1432.jpg",
-      "time": "15:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_12_30_15518_1432.jpg",
-      "time": "15:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_12_40_15518_1432.jpg",
-      "time": "15:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_12_50_15518_1432.jpg",
-      "time": "15:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_13_00_15518_1432.jpg",
-      "time": "16:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_13_10_15518_1432.jpg",
-      "time": "16:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_13_20_15518_1432.jpg",
-      "time": "16:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_13_30_15518_1432.jpg",
-      "time": "16:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_13_40_15518_1432.jpg",
-      "time": "16:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_13_50_15518_1432.jpg",
-      "time": "16:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_14_00_15518_1432.jpg",
-      "time": "17:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_14_10_15518_1432.jpg",
-      "time": "17:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_14_20_15518_1432.jpg",
-      "time": "17:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_14_30_15518_1432.jpg",
-      "time": "17:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_14_40_15518_1432.jpg",
-      "time": "17:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_14_50_15518_1432.jpg",
-      "time": "17:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_15_00_15518_1432.jpg",
-      "time": "18:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_15_10_15518_1432.jpg",
-      "time": "18:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_15_20_15518_1432.jpg",
-      "time": "18:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_15_30_15518_1432.jpg",
-      "time": "18:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_15_40_15518_1432.jpg",
-      "time": "18:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_15_50_15518_1432.jpg",
-      "time": "18:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_16_00_15518_1432.jpg",
-      "time": "19:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat2_images/sat_2026_11_06_16_10_15518_1432.jpg",
-      "time": "19:10 KSA",
-      "date": "2026/11/06"
-    },
     {
       "file": "sat2_images/sat_2026_11_06_16_20_15518_1432.jpg",
       "time": "19:20 KSA",
@@ -1086,239 +681,49 @@
       "file": "sat2_images/sat_2026_11_07_06_10_15518_1432.jpg",
       "time": "09:10 KSA",
       "date": "2026/11/07"
+    },
+    {
+      "file": "sat2_images/sat_2026_11_07_06_20_15518_1432.jpg",
+      "time": "09:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat2_images/sat_2026_11_07_06_30_15518_1432.jpg",
+      "time": "09:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat2_images/sat_2026_11_07_09_20_15518_1432.jpg",
+      "time": "12:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat2_images/sat_2026_11_07_09_30_15518_1432.jpg",
+      "time": "12:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat2_images/sat_2026_11_07_10_40_15518_1432.jpg",
+      "time": "13:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat2_images/sat_2026_11_07_10_50_15518_1432.jpg",
+      "time": "13:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat2_images/sat_2026_11_07_11_00_15518_1432.jpg",
+      "time": "14:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat2_images/sat_2026_11_07_11_10_15518_1432.jpg",
+      "time": "14:10 KSA",
+      "date": "2026/11/07"
     }
   ],
   "sat3": [
-    {
-      "file": "sat3_images/sat_2026_11_06_08_50_15518_1515.jpg",
-      "time": "11:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_09_00_15518_1515.jpg",
-      "time": "12:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_09_10_15518_1515.jpg",
-      "time": "12:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_09_20_15518_1515.jpg",
-      "time": "12:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_09_30_15518_1515.jpg",
-      "time": "12:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_09_40_15518_1515.jpg",
-      "time": "12:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_09_50_15518_1515.jpg",
-      "time": "12:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_10_00_15518_1515.jpg",
-      "time": "13:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_10_10_15518_1515.jpg",
-      "time": "13:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_10_20_15518_1515.jpg",
-      "time": "13:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_10_30_15518_1515.jpg",
-      "time": "13:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_10_40_15518_1515.jpg",
-      "time": "13:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_10_50_15518_1515.jpg",
-      "time": "13:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_11_00_15518_1515.jpg",
-      "time": "14:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_11_10_15518_1515.jpg",
-      "time": "14:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_11_20_15518_1515.jpg",
-      "time": "14:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_11_30_15518_1515.jpg",
-      "time": "14:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_11_40_15518_1515.jpg",
-      "time": "14:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_11_50_15518_1515.jpg",
-      "time": "14:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_12_00_15518_1515.jpg",
-      "time": "15:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_12_10_15518_1515.jpg",
-      "time": "15:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_12_20_15518_1515.jpg",
-      "time": "15:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_12_30_15518_1515.jpg",
-      "time": "15:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_12_40_15518_1515.jpg",
-      "time": "15:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_12_50_15518_1515.jpg",
-      "time": "15:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_13_00_15518_1515.jpg",
-      "time": "16:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_13_10_15518_1515.jpg",
-      "time": "16:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_13_20_15518_1515.jpg",
-      "time": "16:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_13_30_15518_1515.jpg",
-      "time": "16:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_13_40_15518_1515.jpg",
-      "time": "16:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_13_50_15518_1515.jpg",
-      "time": "16:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_14_00_15518_1515.jpg",
-      "time": "17:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_14_10_15518_1515.jpg",
-      "time": "17:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_14_20_15518_1515.jpg",
-      "time": "17:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_14_30_15518_1515.jpg",
-      "time": "17:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_14_40_15518_1515.jpg",
-      "time": "17:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_14_50_15518_1515.jpg",
-      "time": "17:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_15_00_15518_1515.jpg",
-      "time": "18:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_15_10_15518_1515.jpg",
-      "time": "18:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_15_20_15518_1515.jpg",
-      "time": "18:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_15_30_15518_1515.jpg",
-      "time": "18:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_15_40_15518_1515.jpg",
-      "time": "18:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_15_50_15518_1515.jpg",
-      "time": "18:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_16_00_15518_1515.jpg",
-      "time": "19:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_16_10_15518_1515.jpg",
-      "time": "19:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat3_images/sat_2026_11_06_16_20_15518_1515.jpg",
-      "time": "19:20 KSA",
-      "date": "2026/11/06"
-    },
     {
       "file": "sat3_images/sat_2026_11_06_16_30_15518_1515.jpg",
       "time": "19:30 KSA",
@@ -1633,224 +1038,54 @@
       "file": "sat3_images/sat_2026_11_07_06_10_15518_1515.jpg",
       "time": "09:10 KSA",
       "date": "2026/11/07"
+    },
+    {
+      "file": "sat3_images/sat_2026_11_07_06_20_15518_1515.jpg",
+      "time": "09:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat3_images/sat_2026_11_07_06_30_15518_1515.jpg",
+      "time": "09:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat3_images/sat_2026_11_07_09_20_15518_1515.jpg",
+      "time": "12:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat3_images/sat_2026_11_07_09_30_15518_1515.jpg",
+      "time": "12:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat3_images/sat_2026_11_07_09_40_15518_1515.jpg",
+      "time": "12:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat3_images/sat_2026_11_07_10_40_15518_1515.jpg",
+      "time": "13:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat3_images/sat_2026_11_07_10_50_15518_1515.jpg",
+      "time": "13:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat3_images/sat_2026_11_07_11_00_15518_1515.jpg",
+      "time": "14:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat3_images/sat_2026_11_07_11_10_15518_1515.jpg",
+      "time": "14:10 KSA",
+      "date": "2026/11/07"
     }
   ],
   "sat4": [
-    {
-      "file": "sat4_images/sat_2026_11_06_08_50_15518_1514.jpg",
-      "time": "11:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_09_00_15518_1514.jpg",
-      "time": "12:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_09_10_15518_1514.jpg",
-      "time": "12:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_09_20_15518_1514.jpg",
-      "time": "12:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_09_30_15518_1514.jpg",
-      "time": "12:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_09_40_15518_1514.jpg",
-      "time": "12:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_09_50_15518_1514.jpg",
-      "time": "12:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_10_00_15518_1514.jpg",
-      "time": "13:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_10_10_15518_1514.jpg",
-      "time": "13:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_10_20_15518_1514.jpg",
-      "time": "13:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_10_30_15518_1514.jpg",
-      "time": "13:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_10_40_15518_1514.jpg",
-      "time": "13:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_10_50_15518_1514.jpg",
-      "time": "13:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_11_00_15518_1514.jpg",
-      "time": "14:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_11_10_15518_1514.jpg",
-      "time": "14:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_11_20_15518_1514.jpg",
-      "time": "14:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_11_30_15518_1514.jpg",
-      "time": "14:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_11_40_15518_1514.jpg",
-      "time": "14:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_11_50_15518_1514.jpg",
-      "time": "14:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_12_00_15518_1514.jpg",
-      "time": "15:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_12_10_15518_1514.jpg",
-      "time": "15:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_12_20_15518_1514.jpg",
-      "time": "15:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_12_30_15518_1514.jpg",
-      "time": "15:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_12_40_15518_1514.jpg",
-      "time": "15:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_12_50_15518_1514.jpg",
-      "time": "15:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_13_00_15518_1514.jpg",
-      "time": "16:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_13_10_15518_1514.jpg",
-      "time": "16:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_13_20_15518_1514.jpg",
-      "time": "16:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_13_30_15518_1514.jpg",
-      "time": "16:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_13_40_15518_1514.jpg",
-      "time": "16:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_13_50_15518_1514.jpg",
-      "time": "16:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_14_00_15518_1514.jpg",
-      "time": "17:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_14_10_15518_1514.jpg",
-      "time": "17:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_14_20_15518_1514.jpg",
-      "time": "17:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_14_30_15518_1514.jpg",
-      "time": "17:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_14_40_15518_1514.jpg",
-      "time": "17:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_14_50_15518_1514.jpg",
-      "time": "17:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_15_00_15518_1514.jpg",
-      "time": "18:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_15_10_15518_1514.jpg",
-      "time": "18:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_15_20_15518_1514.jpg",
-      "time": "18:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_15_30_15518_1514.jpg",
-      "time": "18:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_15_40_15518_1514.jpg",
-      "time": "18:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat4_images/sat_2026_11_06_15_50_15518_1514.jpg",
-      "time": "18:50 KSA",
-      "date": "2026/11/06"
-    },
     {
       "file": "sat4_images/sat_2026_11_06_16_00_15518_1514.jpg",
       "time": "19:00 KSA",
@@ -2180,279 +1415,39 @@
       "file": "sat4_images/sat_2026_11_07_06_10_15518_1514.jpg",
       "time": "09:10 KSA",
       "date": "2026/11/07"
+    },
+    {
+      "file": "sat4_images/sat_2026_11_07_06_20_15518_1514.jpg",
+      "time": "09:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat4_images/sat_2026_11_07_06_30_15518_1514.jpg",
+      "time": "09:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat4_images/sat_2026_11_07_10_40_15518_1514.jpg",
+      "time": "13:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat4_images/sat_2026_11_07_10_50_15518_1514.jpg",
+      "time": "13:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat4_images/sat_2026_11_07_11_00_15518_1514.jpg",
+      "time": "14:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat4_images/sat_2026_11_07_11_10_15518_1514.jpg",
+      "time": "14:10 KSA",
+      "date": "2026/11/07"
     }
   ],
   "sat5": [
-    {
-      "file": "sat5_images/sat_2026_11_06_08_50_15518_1428.jpg",
-      "time": "11:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_09_00_15518_1428.jpg",
-      "time": "12:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_09_10_15518_1428.jpg",
-      "time": "12:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_09_20_15518_1428.jpg",
-      "time": "12:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_09_30_15518_1428.jpg",
-      "time": "12:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_09_40_15518_1428.jpg",
-      "time": "12:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_09_50_15518_1428.jpg",
-      "time": "12:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_10_00_15518_1428.jpg",
-      "time": "13:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_10_10_15518_1428.jpg",
-      "time": "13:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_10_20_15518_1428.jpg",
-      "time": "13:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_10_30_15518_1428.jpg",
-      "time": "13:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_10_40_15518_1428.jpg",
-      "time": "13:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_10_50_15518_1428.jpg",
-      "time": "13:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_11_00_15518_1428.jpg",
-      "time": "14:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_11_10_15518_1428.jpg",
-      "time": "14:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_11_20_15518_1428.jpg",
-      "time": "14:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_11_30_15518_1428.jpg",
-      "time": "14:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_11_40_15518_1428.jpg",
-      "time": "14:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_11_50_15518_1428.jpg",
-      "time": "14:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_12_00_15518_1428.jpg",
-      "time": "15:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_12_10_15518_1428.jpg",
-      "time": "15:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_12_20_15518_1428.jpg",
-      "time": "15:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_12_30_15518_1428.jpg",
-      "time": "15:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_12_40_15518_1428.jpg",
-      "time": "15:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_12_50_15518_1428.jpg",
-      "time": "15:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_13_00_15518_1428.jpg",
-      "time": "16:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_13_10_15518_1428.jpg",
-      "time": "16:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_13_20_15518_1428.jpg",
-      "time": "16:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_13_30_15518_1428.jpg",
-      "time": "16:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_13_40_15518_1428.jpg",
-      "time": "16:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_13_50_15518_1428.jpg",
-      "time": "16:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_14_00_15518_1428.jpg",
-      "time": "17:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_14_10_15518_1428.jpg",
-      "time": "17:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_14_20_15518_1428.jpg",
-      "time": "17:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_14_30_15518_1428.jpg",
-      "time": "17:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_14_40_15518_1428.jpg",
-      "time": "17:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_14_50_15518_1428.jpg",
-      "time": "17:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_15_00_15518_1428.jpg",
-      "time": "18:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_15_10_15518_1428.jpg",
-      "time": "18:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_15_20_15518_1428.jpg",
-      "time": "18:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_15_30_15518_1428.jpg",
-      "time": "18:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_15_40_15518_1428.jpg",
-      "time": "18:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_15_50_15518_1428.jpg",
-      "time": "18:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_16_00_15518_1428.jpg",
-      "time": "19:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_16_10_15518_1428.jpg",
-      "time": "19:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_16_20_15518_1428.jpg",
-      "time": "19:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_16_30_15518_1428.jpg",
-      "time": "19:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_16_40_15518_1428.jpg",
-      "time": "19:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_16_50_15518_1428.jpg",
-      "time": "19:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_17_00_15518_1428.jpg",
-      "time": "20:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_17_10_15518_1428.jpg",
-      "time": "20:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_17_20_15518_1428.jpg",
-      "time": "20:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_17_30_15518_1428.jpg",
-      "time": "20:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat5_images/sat_2026_11_06_17_40_15518_1428.jpg",
-      "time": "20:40 KSA",
-      "date": "2026/11/06"
-    },
     {
       "file": "sat5_images/sat_2026_11_06_17_50_15518_1428.jpg",
       "time": "20:50 KSA",
@@ -2727,209 +1722,94 @@
       "file": "sat5_images/sat_2026_11_07_06_10_15518_1428.jpg",
       "time": "09:10 KSA",
       "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_06_20_15518_1428.jpg",
+      "time": "09:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_06_30_15518_1428.jpg",
+      "time": "09:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_07_00_15518_1428.jpg",
+      "time": "10:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_07_10_15518_1428.jpg",
+      "time": "10:10 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_07_20_15518_1428.jpg",
+      "time": "10:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_07_30_15518_1428.jpg",
+      "time": "10:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_07_40_15518_1428.jpg",
+      "time": "10:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_07_50_15518_1428.jpg",
+      "time": "10:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_08_10_15518_1428.jpg",
+      "time": "11:10 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_08_20_15518_1428.jpg",
+      "time": "11:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_08_30_15518_1428.jpg",
+      "time": "11:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_08_40_15518_1428.jpg",
+      "time": "11:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_08_50_15518_1428.jpg",
+      "time": "11:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_09_00_15518_1428.jpg",
+      "time": "12:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_10_40_15518_1428.jpg",
+      "time": "13:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_10_50_15518_1428.jpg",
+      "time": "13:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat5_images/sat_2026_11_07_11_10_15518_1428.jpg",
+      "time": "14:10 KSA",
+      "date": "2026/11/07"
     }
   ],
   "sat6": [
-    {
-      "file": "sat6_images/sat_2026_11_06_08_50_15518_1426.jpg",
-      "time": "11:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_09_00_15518_1426.jpg",
-      "time": "12:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_09_10_15518_1426.jpg",
-      "time": "12:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_09_20_15518_1426.jpg",
-      "time": "12:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_09_30_15518_1426.jpg",
-      "time": "12:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_09_40_15518_1426.jpg",
-      "time": "12:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_09_50_15518_1426.jpg",
-      "time": "12:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_10_00_15518_1426.jpg",
-      "time": "13:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_10_10_15518_1426.jpg",
-      "time": "13:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_10_20_15518_1426.jpg",
-      "time": "13:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_10_30_15518_1426.jpg",
-      "time": "13:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_10_40_15518_1426.jpg",
-      "time": "13:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_10_50_15518_1426.jpg",
-      "time": "13:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_11_00_15518_1426.jpg",
-      "time": "14:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_11_10_15518_1426.jpg",
-      "time": "14:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_11_20_15518_1426.jpg",
-      "time": "14:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_11_30_15518_1426.jpg",
-      "time": "14:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_11_40_15518_1426.jpg",
-      "time": "14:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_11_50_15518_1426.jpg",
-      "time": "14:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_12_00_15518_1426.jpg",
-      "time": "15:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_12_10_15518_1426.jpg",
-      "time": "15:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_12_20_15518_1426.jpg",
-      "time": "15:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_12_30_15518_1426.jpg",
-      "time": "15:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_12_40_15518_1426.jpg",
-      "time": "15:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_12_50_15518_1426.jpg",
-      "time": "15:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_13_00_15518_1426.jpg",
-      "time": "16:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_13_10_15518_1426.jpg",
-      "time": "16:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_13_20_15518_1426.jpg",
-      "time": "16:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_13_30_15518_1426.jpg",
-      "time": "16:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_13_40_15518_1426.jpg",
-      "time": "16:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_13_50_15518_1426.jpg",
-      "time": "16:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_14_00_15518_1426.jpg",
-      "time": "17:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_14_10_15518_1426.jpg",
-      "time": "17:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_14_20_15518_1426.jpg",
-      "time": "17:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_14_30_15518_1426.jpg",
-      "time": "17:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_14_40_15518_1426.jpg",
-      "time": "17:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_14_50_15518_1426.jpg",
-      "time": "17:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_15_00_15518_1426.jpg",
-      "time": "18:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_15_10_15518_1426.jpg",
-      "time": "18:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat6_images/sat_2026_11_06_15_20_15518_1426.jpg",
-      "time": "18:20 KSA",
-      "date": "2026/11/06"
-    },
     {
       "file": "sat6_images/sat_2026_11_06_15_30_15518_1426.jpg",
       "time": "18:30 KSA",
@@ -3269,219 +2149,29 @@
       "file": "sat6_images/sat_2026_11_07_06_10_15518_1426.jpg",
       "time": "09:10 KSA",
       "date": "2026/11/07"
+    },
+    {
+      "file": "sat6_images/sat_2026_11_07_06_20_15518_1426.jpg",
+      "time": "09:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat6_images/sat_2026_11_07_06_30_15518_1426.jpg",
+      "time": "09:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat6_images/sat_2026_11_07_10_40_15518_1426.jpg",
+      "time": "13:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat6_images/sat_2026_11_07_11_10_15518_1426.jpg",
+      "time": "14:10 KSA",
+      "date": "2026/11/07"
     }
   ],
   "sat7": [
-    {
-      "file": "sat7_images/sat_2026_11_06_08_50_15518_1430.jpg",
-      "time": "11:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_09_00_15518_1430.jpg",
-      "time": "12:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_09_10_15518_1430.jpg",
-      "time": "12:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_09_20_15518_1430.jpg",
-      "time": "12:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_09_30_15518_1430.jpg",
-      "time": "12:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_09_40_15518_1430.jpg",
-      "time": "12:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_09_50_15518_1430.jpg",
-      "time": "12:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_10_00_15518_1430.jpg",
-      "time": "13:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_10_10_15518_1430.jpg",
-      "time": "13:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_10_20_15518_1430.jpg",
-      "time": "13:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_10_30_15518_1430.jpg",
-      "time": "13:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_10_40_15518_1430.jpg",
-      "time": "13:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_10_50_15518_1430.jpg",
-      "time": "13:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_11_00_15518_1430.jpg",
-      "time": "14:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_11_10_15518_1430.jpg",
-      "time": "14:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_11_20_15518_1430.jpg",
-      "time": "14:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_11_30_15518_1430.jpg",
-      "time": "14:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_11_40_15518_1430.jpg",
-      "time": "14:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_11_50_15518_1430.jpg",
-      "time": "14:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_12_00_15518_1430.jpg",
-      "time": "15:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_12_10_15518_1430.jpg",
-      "time": "15:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_12_20_15518_1430.jpg",
-      "time": "15:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_12_30_15518_1430.jpg",
-      "time": "15:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_12_40_15518_1430.jpg",
-      "time": "15:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_12_50_15518_1430.jpg",
-      "time": "15:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_13_00_15518_1430.jpg",
-      "time": "16:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_13_10_15518_1430.jpg",
-      "time": "16:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_13_20_15518_1430.jpg",
-      "time": "16:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_13_30_15518_1430.jpg",
-      "time": "16:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_13_40_15518_1430.jpg",
-      "time": "16:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_13_50_15518_1430.jpg",
-      "time": "16:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_14_00_15518_1430.jpg",
-      "time": "17:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_14_10_15518_1430.jpg",
-      "time": "17:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_14_20_15518_1430.jpg",
-      "time": "17:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_14_30_15518_1430.jpg",
-      "time": "17:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_14_40_15518_1430.jpg",
-      "time": "17:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_14_50_15518_1430.jpg",
-      "time": "17:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_15_00_15518_1430.jpg",
-      "time": "18:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_15_10_15518_1430.jpg",
-      "time": "18:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_15_20_15518_1430.jpg",
-      "time": "18:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_15_30_15518_1430.jpg",
-      "time": "18:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat7_images/sat_2026_11_06_15_40_15518_1430.jpg",
-      "time": "18:40 KSA",
-      "date": "2026/11/06"
-    },
     {
       "file": "sat7_images/sat_2026_11_06_15_50_15518_1430.jpg",
       "time": "18:50 KSA",
@@ -3811,224 +2501,39 @@
       "file": "sat7_images/sat_2026_11_07_06_10_15518_1430.jpg",
       "time": "09:10 KSA",
       "date": "2026/11/07"
+    },
+    {
+      "file": "sat7_images/sat_2026_11_07_06_20_15518_1430.jpg",
+      "time": "09:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat7_images/sat_2026_11_07_06_30_15518_1430.jpg",
+      "time": "09:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat7_images/sat_2026_11_07_10_40_15518_1430.jpg",
+      "time": "13:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat7_images/sat_2026_11_07_10_50_15518_1430.jpg",
+      "time": "13:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat7_images/sat_2026_11_07_11_00_15518_1430.jpg",
+      "time": "14:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat7_images/sat_2026_11_07_11_10_15518_1430.jpg",
+      "time": "14:10 KSA",
+      "date": "2026/11/07"
     }
   ],
   "sat8": [
-    {
-      "file": "sat8_images/sat_2026_11_06_08_50_15518_1433.jpg",
-      "time": "11:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_09_00_15518_1433.jpg",
-      "time": "12:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_09_10_15518_1433.jpg",
-      "time": "12:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_09_20_15518_1433.jpg",
-      "time": "12:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_09_30_15518_1433.jpg",
-      "time": "12:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_09_40_15518_1433.jpg",
-      "time": "12:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_09_50_15518_1433.jpg",
-      "time": "12:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_10_00_15518_1433.jpg",
-      "time": "13:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_10_10_15518_1433.jpg",
-      "time": "13:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_10_20_15518_1433.jpg",
-      "time": "13:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_10_30_15518_1433.jpg",
-      "time": "13:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_10_40_15518_1433.jpg",
-      "time": "13:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_10_50_15518_1433.jpg",
-      "time": "13:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_11_00_15518_1433.jpg",
-      "time": "14:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_11_10_15518_1433.jpg",
-      "time": "14:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_11_20_15518_1433.jpg",
-      "time": "14:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_11_30_15518_1433.jpg",
-      "time": "14:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_11_40_15518_1433.jpg",
-      "time": "14:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_11_50_15518_1433.jpg",
-      "time": "14:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_12_00_15518_1433.jpg",
-      "time": "15:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_12_10_15518_1433.jpg",
-      "time": "15:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_12_20_15518_1433.jpg",
-      "time": "15:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_12_30_15518_1433.jpg",
-      "time": "15:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_12_40_15518_1433.jpg",
-      "time": "15:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_12_50_15518_1433.jpg",
-      "time": "15:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_13_00_15518_1433.jpg",
-      "time": "16:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_13_10_15518_1433.jpg",
-      "time": "16:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_13_20_15518_1433.jpg",
-      "time": "16:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_13_30_15518_1433.jpg",
-      "time": "16:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_13_40_15518_1433.jpg",
-      "time": "16:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_13_50_15518_1433.jpg",
-      "time": "16:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_14_00_15518_1433.jpg",
-      "time": "17:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_14_10_15518_1433.jpg",
-      "time": "17:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_14_20_15518_1433.jpg",
-      "time": "17:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_14_30_15518_1433.jpg",
-      "time": "17:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_14_40_15518_1433.jpg",
-      "time": "17:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_14_50_15518_1433.jpg",
-      "time": "17:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_15_00_15518_1433.jpg",
-      "time": "18:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_15_10_15518_1433.jpg",
-      "time": "18:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_15_20_15518_1433.jpg",
-      "time": "18:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_15_30_15518_1433.jpg",
-      "time": "18:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_15_40_15518_1433.jpg",
-      "time": "18:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat8_images/sat_2026_11_06_15_50_15518_1433.jpg",
-      "time": "18:50 KSA",
-      "date": "2026/11/06"
-    },
     {
       "file": "sat8_images/sat_2026_11_06_16_00_15518_1433.jpg",
       "time": "19:00 KSA",
@@ -4358,194 +2863,39 @@
       "file": "sat8_images/sat_2026_11_07_06_10_15518_1433.jpg",
       "time": "09:10 KSA",
       "date": "2026/11/07"
+    },
+    {
+      "file": "sat8_images/sat_2026_11_07_06_20_15518_1433.jpg",
+      "time": "09:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat8_images/sat_2026_11_07_06_30_15518_1433.jpg",
+      "time": "09:30 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat8_images/sat_2026_11_07_10_40_15518_1433.jpg",
+      "time": "13:40 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat8_images/sat_2026_11_07_10_50_15518_1433.jpg",
+      "time": "13:50 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat8_images/sat_2026_11_07_11_00_15518_1433.jpg",
+      "time": "14:00 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat8_images/sat_2026_11_07_11_10_15518_1433.jpg",
+      "time": "14:10 KSA",
+      "date": "2026/11/07"
     }
   ],
   "sat9": [
-    {
-      "file": "sat9_images/sat_2026_11_06_08_50_15518_1431-1437.jpg",
-      "time": "11:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_09_00_15518_1431-1437.jpg",
-      "time": "12:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_09_10_15518_1431-1437.jpg",
-      "time": "12:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_09_20_15518_1431-1437.jpg",
-      "time": "12:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_09_30_15518_1431-1437.jpg",
-      "time": "12:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_09_40_15518_1431-1437.jpg",
-      "time": "12:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_09_50_15518_1431-1437.jpg",
-      "time": "12:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_10_00_15518_1431-1437.jpg",
-      "time": "13:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_10_10_15518_1431-1437.jpg",
-      "time": "13:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_10_20_15518_1431-1437.jpg",
-      "time": "13:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_10_30_15518_1431-1437.jpg",
-      "time": "13:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_10_40_15518_1431-1437.jpg",
-      "time": "13:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_10_50_15518_1431-1437.jpg",
-      "time": "13:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_11_00_15518_1431-1437.jpg",
-      "time": "14:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_11_10_15518_1431-1437.jpg",
-      "time": "14:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_11_20_15518_1431-1437.jpg",
-      "time": "14:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_11_30_15518_1431-1437.jpg",
-      "time": "14:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_11_40_15518_1431-1437.jpg",
-      "time": "14:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_11_50_15518_1431-1437.jpg",
-      "time": "14:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_12_00_15518_1431-1437.jpg",
-      "time": "15:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_12_10_15518_1431-1437.jpg",
-      "time": "15:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_12_20_15518_1431-1437.jpg",
-      "time": "15:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_12_30_15518_1431-1437.jpg",
-      "time": "15:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_12_40_15518_1431-1437.jpg",
-      "time": "15:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_12_50_15518_1431-1437.jpg",
-      "time": "15:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_13_00_15518_1431-1437.jpg",
-      "time": "16:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_13_10_15518_1431-1437.jpg",
-      "time": "16:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_13_20_15518_1431-1437.jpg",
-      "time": "16:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_13_30_15518_1431-1437.jpg",
-      "time": "16:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_13_40_15518_1431-1437.jpg",
-      "time": "16:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_13_50_15518_1431-1437.jpg",
-      "time": "16:50 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_14_00_15518_1431-1437.jpg",
-      "time": "17:00 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_14_10_15518_1431-1437.jpg",
-      "time": "17:10 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_14_20_15518_1431-1437.jpg",
-      "time": "17:20 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_14_30_15518_1431-1437.jpg",
-      "time": "17:30 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_14_40_15518_1431-1437.jpg",
-      "time": "17:40 KSA",
-      "date": "2026/11/06"
-    },
-    {
-      "file": "sat9_images/sat_2026_11_06_14_50_15518_1431-1437.jpg",
-      "time": "17:50 KSA",
-      "date": "2026/11/06"
-    },
     {
       "file": "sat9_images/sat_2026_11_06_15_00_15518_1431-1437.jpg",
       "time": "18:00 KSA",
@@ -4894,6 +3244,16 @@
     {
       "file": "sat9_images/sat_2026_11_07_06_10_15518_1431-1437.jpg",
       "time": "09:10 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat9_images/sat_2026_11_07_06_20_15518_1431-1437.jpg",
+      "time": "09:20 KSA",
+      "date": "2026/11/07"
+    },
+    {
+      "file": "sat9_images/sat_2026_11_07_06_30_15518_1431-1437.jpg",
+      "time": "09:30 KSA",
       "date": "2026/11/07"
     }
   ]

@@ -139,9 +139,15 @@ async function runCloudSync() {
                     }, `https://${t.domain}.meteologix.com/images/data/cache/sat/${filename}`);
 
                     if (b64) {
-                        fs.writeFileSync(destPath, Buffer.from(b64, 'base64'));
-                        downloaded++;
-                        console.log(`✅ [سحابي] تم سحب: ${filename}`);
+                        const buf = Buffer.from(b64, 'base64');
+                        // التأكد القاطع أن الملف صورة JPEG حقيقية وليس صفحة خطأ أو ملف غير مكتمل
+                        // توقيع JPEG يبدأ دائماً بـ FF D8 FF
+                        const isRealJpeg = buf.length > 15000 && buf[0] === 0xFF && buf[1] === 0xD8 && buf[2] === 0xFF;
+                        if (isRealJpeg) {
+                            fs.writeFileSync(destPath, buf);
+                            downloaded++;
+                            console.log(`✅ [سحابي] تم سحب واعتماد: ${filename}`);
+                        }
                     }
                 } catch(e) {}
             }

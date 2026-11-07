@@ -1,0 +1,21 @@
+{
+  "name": "sat_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "download_via_canvas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer-core": "^25.16.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.158.0"
+  }
+}

@@ -25,6 +25,10 @@ Object.values(DIRS).forEach(d => {
 });
 
 async function getValidToken() {
+    // الأولوية القصوى للمفتاح الدائم السحابي
+    if (process.env.CLOUDFLARE_API_TOKEN) {
+        return process.env.CLOUDFLARE_API_TOKEN;
+    }
     let token = process.env.CLOUDFLARE_OAUTH_TOKEN;
     const refreshToken = process.env.CLOUDFLARE_REFRESH_TOKEN;
     
@@ -36,19 +40,19 @@ async function getValidToken() {
         if (testData.success) return token;
     } catch(e) {}
 
-    const refreshRes = await fetch('https://dash.cloudflare.com/oauth2/token', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-            grant_type: 'refresh_token',
-            client_id: '54d11594-84e4-41aa-b438-e81b8fa78ee7',
-            refresh_token: refreshToken
-        })
-    });
-    const rData = await refreshRes.json();
-    if (rData.access_token) {
-        return rData.access_token;
-    }
+    try {
+        const refreshRes = await fetch('https://dash.cloudflare.com/oauth2/token', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({
+                grant_type: 'refresh_token',
+                client_id: '54d11594-84e4-41aa-b438-e81b8fa78ee7',
+                refresh_token: refreshToken
+            })
+        });
+        const rData = await refreshRes.json();
+        if (rData.access_token) return rData.access_token;
+    } catch(e) {}
     return token;
 }
 

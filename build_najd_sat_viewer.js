@@ -583,37 +583,33 @@ const htmlContent = `<!DOCTYPE html>
             #map-container {
                 top: 48px;
                 bottom: 0;
-                padding: 8px 12px 115px 12px; /* نفس المكان السابق تماماً بالتوسيط التام */
+                padding: 6px 12px 115px 12px;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 box-sizing: border-box;
             }
 
             #mobile-date-banner {
-                position: absolute;
-                top: 56px;
-                left: 50%;
-                transform: translateX(-50%);
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 gap: 6px;
-                background: rgba(17, 24, 39, 0.75);
+                background: rgba(17, 24, 39, 0.72);
                 border: 1px solid rgba(56, 189, 248, 0.25);
                 backdrop-filter: blur(12px);
                 -webkit-backdrop-filter: blur(12px);
                 border-radius: 20px;
-                padding: 3.5px 11px;
-                font-size: 10px;
+                padding: 4px 12px;
+                margin: 4px auto 8px auto;
+                font-size: 10.5px;
                 font-weight: 500;
                 color: #e0f2fe;
-                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 10px rgba(56, 189, 248, 0.1);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 10px rgba(56, 189, 248, 0.1);
                 direction: rtl;
                 letter-spacing: 0.1px;
-                z-index: 30;
-                pointer-events: none;
-                white-space: nowrap;
+                z-index: 20;
             }
 
             #mobile-date-banner .cal-icon {

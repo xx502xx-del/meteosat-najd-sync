@@ -582,13 +582,15 @@ const htmlContent = `<!DOCTYPE html>
 
             #map-container {
                 top: 48px;
-                bottom: 0;
-                padding: 6px 12px 115px 12px;
+                bottom: auto;
+                position: relative;
+                padding: 6px 12px 0 12px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
                 box-sizing: border-box;
+                width: 100%;
             }
 
             #mobile-date-banner {
@@ -636,25 +638,25 @@ const htmlContent = `<!DOCTYPE html>
                 box-sizing: border-box;
             }
 
-            /* الشريط الزجاجي العائم الفخم */
+            /* الشريط الزجاجي المرفوع أسفل صورة القمر مباشرة */
             #bottom-panel {
-                position: absolute;
-                bottom: 12px;
-                left: 12px;
-                right: 12px;
+                position: relative;
+                margin: 10px 12px 16px 12px;
                 height: auto;
-                background: rgba(17, 21, 30, 0.78);
+                background: rgba(17, 21, 30, 0.82);
                 backdrop-filter: blur(16px);
                 -webkit-backdrop-filter: blur(16px);
-                border: 1px solid rgba(56, 189, 248, 0.22);
+                border: 1px solid rgba(56, 189, 248, 0.25);
                 border-radius: 16px;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.65), 0 0 15px rgba(56, 189, 248, 0.08);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 15px rgba(56, 189, 248, 0.1);
                 flex-direction: column;
                 justify-content: center;
                 align-items: stretch;
                 padding: 10px 14px;
                 gap: 8px;
                 z-index: 40;
+                width: calc(100% - 24px);
+                box-sizing: border-box;
             }
 
             .controls-group {

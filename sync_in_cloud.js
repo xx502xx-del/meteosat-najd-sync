@@ -116,7 +116,21 @@ async function runCloudSync() {
         const min = String(slot.getUTCMinutes()).padStart(2, '0');
 
         for (const t of targets) {
-            const filename = `sat_${yyyy}_${mm}_${dd}_${hh}_${min}_15518_${t.code}.jpg`;
+            // القمر الرئيسي sat1 فوري بأسرع ثانية ممكنة
+            // الأقمار المعالجة المشتقة (الغبار، الضباب، الكتل، وغيرها) تتطلب فريماً ناضجاً ومكتملاً (10 دقائق)
+            let checkSlot = slot;
+            if (t.key !== 'sat1' && i === 0) {
+                // تخطي الفريم الأخير للأقمار المشتقة لمنحها وقت النضج والمعالجة الكاملة في المصدر
+                continue;
+            }
+
+            const cYyyy = checkSlot.getUTCFullYear();
+            const cMm = String(checkSlot.getUTCMonth() + 1).padStart(2, '0');
+            const cDd = String(checkSlot.getUTCDate()).padStart(2, '0');
+            const cHh = String(checkSlot.getUTCHours()).padStart(2, '0');
+            const cMin = String(checkSlot.getUTCMinutes()).padStart(2, '0');
+
+            const filename = `sat_${cYyyy}_${cMm}_${cDd}_${cHh}_${cMin}_15518_${t.code}.jpg`;
             const destPath = path.join(t.dir, filename);
 
             if (!fs.existsSync(destPath) && !existingFiles.has(filename)) {
@@ -204,10 +218,14 @@ async function runCloudSync() {
             const currentList = localManifest[satKey] || [];
             const mergedMap = new Map();
 
-            // إضافة الفريمات السابقة
-            onlineList.forEach(item => mergedMap.set(item.file, item));
+            // إضافة الفريمات السابقة (مع استبعاد أي ملف تالف معروف بحجمه)
+            onlineList.forEach(item => {
+                mergedMap.set(item.file, item);
+            });
             // إضافة الفريمات الجديدة المكتشفة
-            currentList.forEach(item => mergedMap.set(item.file, item));
+            currentList.forEach(item => {
+                mergedMap.set(item.file, item);
+            });
 
             // ترتيب الفريمات تصاعدياً بحسب الوقت
             const sorted = Array.from(mergedMap.values()).sort((a, b) => a.file.localeCompare(b.file));

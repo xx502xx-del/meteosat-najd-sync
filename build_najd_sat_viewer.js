@@ -658,8 +658,6 @@ const htmlContent = `<!DOCTYPE html>
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                min-height: 220px;
-                aspect-ratio: 16/10;
             }
 
             #satellite-image {

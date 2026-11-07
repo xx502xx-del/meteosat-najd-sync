@@ -2,7 +2,7 @@ name: 🛰️ Meteosat Najd 24/7 Cloud Auto-Sync
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:

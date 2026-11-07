@@ -103,7 +103,7 @@ async function runCloudSync() {
 
     let downloaded = 0;
     // فحص ذكي لآخر 6 فريمات (الساعة الماضية)
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 18; i++) {
         const slot = new Date(latestUtc.getTime() - (i * STEP_MINUTES * 60 * 1000));
         const yyyy = slot.getUTCFullYear();
         const mm = String(slot.getUTCMonth() + 1).padStart(2, '0');

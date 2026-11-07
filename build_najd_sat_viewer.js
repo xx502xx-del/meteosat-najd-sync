@@ -14,7 +14,10 @@ const DIRS = {
 };
 
 const mapFrames = (folder, code) => {
-    const fullPath = path.join(__dirname, folder);
+    let fullPath = path.join(__dirname, folder);
+    if (!fs.existsSync(fullPath)) {
+        fullPath = path.join(__dirname, 'public', folder);
+    }
     if (!fs.existsSync(fullPath)) return [];
     const files = fs.readdirSync(fullPath).filter(f => f.startsWith('sat_') && f.endsWith(`_15518_${code}.jpg`)).sort();
     return files.map(file => {

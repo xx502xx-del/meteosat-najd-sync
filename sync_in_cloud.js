@@ -9,15 +9,15 @@ const STEP_MINUTES = 10;
 const RETENTION_HOURS = 12;
 
 const DIRS = {
-    sat1: path.join(__dirname, 'public', 'satellite_images'),
-    sat2: path.join(__dirname, 'public', 'sat2_images'),
-    sat3: path.join(__dirname, 'public', 'sat3_images'),
-    sat4: path.join(__dirname, 'public', 'sat4_images'),
-    sat5: path.join(__dirname, 'public', 'sat5_images'),
-    sat6: path.join(__dirname, 'public', 'sat6_images'),
-    sat7: path.join(__dirname, 'public', 'sat7_images'),
-    sat8: path.join(__dirname, 'public', 'sat8_images'),
-    sat9: path.join(__dirname, 'public', 'sat9_images')
+    sat1: path.join(__dirname, 'satellite_images'),
+    sat2: path.join(__dirname, 'sat2_images'),
+    sat3: path.join(__dirname, 'sat3_images'),
+    sat4: path.join(__dirname, 'sat4_images'),
+    sat5: path.join(__dirname, 'sat5_images'),
+    sat6: path.join(__dirname, 'sat6_images'),
+    sat7: path.join(__dirname, 'sat7_images'),
+    sat8: path.join(__dirname, 'sat8_images'),
+    sat9: path.join(__dirname, 'sat9_images')
 };
 
 Object.values(DIRS).forEach(d => {
@@ -56,15 +56,17 @@ async function runCloudSync() {
     console.log(`🚀 [GitHub Actions Cloud] بدء دورة الرصد السحابي 24/7...`);
 
     // 1. تنزيل المانيفست الحالي من Cloudflare
+    let onlineManifest = null;
     let existingFiles = new Set();
     try {
         const mRes = await fetch(`https://${PROJECT_NAME}.pages.dev/nona_manifest.json?t=` + Date.now());
         if (mRes.ok) {
-            const onlineManifest = await mRes.json();
+            onlineManifest = await mRes.json();
             fs.writeFileSync(path.join(__dirname, 'nona_manifest.json'), JSON.stringify(onlineManifest, null, 2));
             Object.values(onlineManifest).forEach(arr => {
                 arr.forEach(item => existingFiles.add(path.basename(item.file)));
             });
+            console.log(`📋 تم تحميل المانيفست الحي بـ ${existingFiles.size} فريم معروف.`);
         }
     } catch(e) {}
 
@@ -100,7 +102,7 @@ async function runCloudSync() {
     ];
 
     let downloaded = 0;
-    // فحص ذكي سريع لآخر 6 فريمات (الساعة الماضية) لاقتناص الجديد بسرعة فائقة
+    // فحص ذكي لآخر 6 فريمات (الساعة الماضية)
     for (let i = 0; i < 6; i++) {
         const slot = new Date(latestUtc.getTime() - (i * STEP_MINUTES * 60 * 1000));
         const yyyy = slot.getUTCFullYear();
@@ -163,13 +165,31 @@ async function runCloudSync() {
         }
     });
 
+    const publicDir = path.join(__dirname, 'public');
+    if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+
+    // مزامنة المجلدات إلى public
+    const copyDirs = ['satellite_images', 'sat2_images', 'sat3_images', 'sat4_images', 'sat5_images', 'sat6_images', 'sat7_images', 'sat8_images', 'sat9_images'];
+    for (const d of copyDirs) {
+        const src = path.join(__dirname, d);
+        const dst = path.join(publicDir, d);
+        if (!fs.existsSync(dst)) fs.mkdirSync(dst, { recursive: true });
+        const files = fs.readdirSync(src);
+        for (const f of files) {
+            const srcF = path.join(src, f);
+            const dstF = path.join(dst, f);
+            if (!fs.existsSync(dstF)) {
+                try { fs.copyFileSync(srcF, dstF); } catch(e) {}
+            }
+        }
+    }
+
     const { execSync } = require('child_process');
     execSync(`node "${path.join(__dirname, 'build_najd_sat_viewer.js')}"`, { stdio: 'inherit' });
-    fs.copyFileSync(path.join(__dirname, 'viewer.html'), path.join(__dirname, 'public', 'index.html'));
+    fs.copyFileSync(path.join(__dirname, 'viewer.html'), path.join(publicDir, 'index.html'));
 
     // الرفع لكلاودفلير
     const token = await getValidToken();
-    const publicDir = path.join(__dirname, 'public');
 
     function getAllFiles(dir, base = '') {
         let results = [];

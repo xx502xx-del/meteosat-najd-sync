@@ -116,13 +116,14 @@ async function runCloudSync() {
         const min = String(slot.getUTCMinutes()).padStart(2, '0');
 
         for (const t of targets) {
-            // القمر الرئيسي sat1 فوري بأسرع ثانية ممكنة
-            // الأقمار المعالجة المشتقة (الغبار، الضباب، الكتل، وغيرها) تتطلب فريماً ناضجاً ومكتملاً (10 دقائق)
-            let checkSlot = slot;
-            if (t.key !== 'sat1' && i === 0) {
-                // تخطي الفريم الأخير للأقمار المشتقة لمنحها وقت النضج والمعالجة الكاملة في المصدر
+            // الأقمار المباشرة (sat1, sat2, sat5) تعمل بنظام المشتركين اللحظي
+            // الأقمار المشتقة المركبة تعود لنظامها السابق المستقر الناضج (فارق 30 دقيقة لضمان اكتمال 100%)
+            const directLiveSats = ['sat1', 'sat2', 'sat5'];
+            if (!directLiveSats.includes(t.key) && i < 3) {
+                // تخطي أول 3 فريمات (30 دقيقة) للأقمار المشتقة لتعود لنظامها السابق المثالي
                 continue;
             }
+            let checkSlot = slot;
 
             const cYyyy = checkSlot.getUTCFullYear();
             const cMm = String(checkSlot.getUTCMonth() + 1).padStart(2, '0');

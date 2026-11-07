@@ -507,6 +507,9 @@ const htmlContent = `<!DOCTYPE html>
             appearance: none;
             width: 100%;
             background: transparent;
+            touch-action: pan-x;
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         input[type=range]:focus {
@@ -1002,6 +1005,21 @@ const htmlContent = `<!DOCTYPE html>
         if (isPlaying) togglePlay();
         showFrame(parseInt(e.target.value));
     });
+
+    timelineSlider.addEventListener('change', (e) => {
+        if (isPlaying) togglePlay();
+        showFrame(parseInt(e.target.value));
+    });
+
+    // تحسين استجابة اللمس على الجوال لمنع تعليق أو تداخل السحب
+    timelineSlider.addEventListener('touchstart', (e) => {
+        e.stopPropagation();
+        if (isPlaying) togglePlay();
+    }, { passive: true });
+
+    timelineSlider.addEventListener('touchmove', (e) => {
+        e.stopPropagation();
+    }, { passive: true });
 
     btnSpeed.addEventListener('click', () => {
         speedIndex = (speedIndex + 1) % speeds.length;

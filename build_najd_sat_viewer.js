@@ -563,6 +563,13 @@ const htmlContent = `<!DOCTYPE html>
            مع الحفاظ على نسخة الكمبيوتر كاملة وكافة السرعات والآليات
            ========================================== */
         @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden;
+                overflow-y: auto;
+                overscroll-behavior-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
             #top-nav {
                 height: 48px;
                 padding: 0 12px;
@@ -964,6 +971,42 @@ const htmlContent = `<!DOCTYPE html>
             return false;
         }
     });
+
+    // دعم سحب الشاشة للأسفل للتحديث (Native & Smooth Pull-to-Refresh)
+    let touchStartY = 0;
+    let touchStartX = 0;
+    let isPulling = false;
+
+    window.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1 && window.scrollY <= 5) {
+            touchStartY = e.touches[0].clientY;
+            touchStartX = e.touches[0].clientX;
+            isPulling = true;
+        }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+        if (!isPulling || e.touches.length !== 1) return;
+        const currentY = e.touches[0].clientY;
+        const currentX = e.touches[0].clientX;
+        const deltaY = currentY - touchStartY;
+        const deltaX = Math.abs(currentX - touchStartX);
+
+        // إذا كانت الحركة سحباً عمودياً واضحاً للأسفل من أعلى الصفحة بأكثر من 130 بكسل
+        if (deltaY > 130 && deltaX < 60 && window.scrollY <= 0) {
+            isPulling = false;
+            // وميض خفيف ينبّه المستخدم بالتحديث الفوري
+            document.body.style.opacity = '0.6';
+            document.body.style.transition = 'opacity 0.2s ease';
+            setTimeout(() => {
+                window.location.reload();
+            }, 150);
+        }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+        isPulling = false;
+    }, { passive: true });
 
     // Start at latest frame without auto-play
     showFrame(currentIndex);

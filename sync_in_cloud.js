@@ -28,7 +28,6 @@ async function getValidToken() {
     let token = process.env.CLOUDFLARE_OAUTH_TOKEN;
     const refreshToken = process.env.CLOUDFLARE_REFRESH_TOKEN;
     
-    // فحص صلاحية التوكن
     try {
         const testRes = await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/pages/projects/${PROJECT_NAME}/upload-token`, {
             headers: { 'Authorization': `Bearer ${token}` }
@@ -37,7 +36,6 @@ async function getValidToken() {
         if (testData.success) return token;
     } catch(e) {}
 
-    // تجديد التوكن
     const refreshRes = await fetch('https://dash.cloudflare.com/oauth2/token', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -57,12 +55,16 @@ async function getValidToken() {
 async function runCloudSync() {
     console.log(`🚀 [GitHub Actions Cloud] بدء دورة الرصد السحابي 24/7...`);
 
-    // 1. تنزيل المانيفست الحالي من Cloudflare لنعرف الصور الموجودة
+    // 1. تنزيل المانيفست الحالي من Cloudflare
+    let existingFiles = new Set();
     try {
         const mRes = await fetch(`https://${PROJECT_NAME}.pages.dev/nona_manifest.json?t=` + Date.now());
         if (mRes.ok) {
             const onlineManifest = await mRes.json();
             fs.writeFileSync(path.join(__dirname, 'nona_manifest.json'), JSON.stringify(onlineManifest, null, 2));
+            Object.values(onlineManifest).forEach(arr => {
+                arr.forEach(item => existingFiles.add(path.basename(item.file)));
+            });
         }
     } catch(e) {}
 
@@ -98,8 +100,8 @@ async function runCloudSync() {
     ];
 
     let downloaded = 0;
-    // فحص آخر 72 فريم لضمان شريط 12 ساعة كامل
-    for (let i = 0; i < 72; i++) {
+    // فحص ذكي سريع لآخر 6 فريمات (الساعة الماضية) لاقتناص الجديد بسرعة فائقة
+    for (let i = 0; i < 6; i++) {
         const slot = new Date(latestUtc.getTime() - (i * STEP_MINUTES * 60 * 1000));
         const yyyy = slot.getUTCFullYear();
         const mm = String(slot.getUTCMonth() + 1).padStart(2, '0');
@@ -111,7 +113,7 @@ async function runCloudSync() {
             const filename = `sat_${yyyy}_${mm}_${dd}_${hh}_${min}_15518_${t.code}.jpg`;
             const destPath = path.join(t.dir, filename);
 
-            if (!fs.existsSync(destPath)) {
+            if (!fs.existsSync(destPath) && !existingFiles.has(filename)) {
                 try {
                     const b64 = await page.evaluate(async (url) => {
                         try {
@@ -133,6 +135,7 @@ async function runCloudSync() {
                     if (b64) {
                         fs.writeFileSync(destPath, Buffer.from(b64, 'base64'));
                         downloaded++;
+                        console.log(`✅ [سحابي] تم سحب: ${filename}`);
                     }
                 } catch(e) {}
             }
@@ -141,6 +144,11 @@ async function runCloudSync() {
 
     await browser.close();
     console.log(`📥 [سحابي] تم سحب ${downloaded} فريمات جديدة.`);
+
+    if (downloaded === 0) {
+        console.log('✨ كل الفريمات محدثة، لا يلزم رفع.');
+        return;
+    }
 
     // تنظيف ما زاد عن 12 ساعة
     const cutoff = Date.now() - (RETENTION_HOURS * 60 * 60 * 1000);
@@ -155,12 +163,11 @@ async function runCloudSync() {
         }
     });
 
-    // إعادة بناء وتوليد ملفات العرض
     const { execSync } = require('child_process');
     execSync(`node "${path.join(__dirname, 'build_najd_sat_viewer.js')}"`, { stdio: 'inherit' });
     fs.copyFileSync(path.join(__dirname, 'viewer.html'), path.join(__dirname, 'public', 'index.html'));
 
-    // الرفع الفوري لكلاودفلير
+    // الرفع لكلاودفلير
     const token = await getValidToken();
     const publicDir = path.join(__dirname, 'public');
 
@@ -202,7 +209,7 @@ async function runCloudSync() {
     const missingHashes = missingData.result || [];
 
     if (missingHashes.length > 0) {
-        console.log(`⚡ [سحابي] رفع ${missingHashes.length} ملف جديد إلى Cloudflare Pages...`);
+        console.log(`⚡ [سحابي] رفع ${missingHashes.length} ملف جديد...`);
         const payload = missingHashes.map(hash => ({
             key: hash,
             value: fs.readFileSync(fileMap[hash]).toString('base64'),

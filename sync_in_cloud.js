@@ -155,10 +155,10 @@ async function runCloudSync() {
 
                     if (b64) {
                         const buf = Buffer.from(b64, 'base64');
-                        // التأكد القاطع أن الملف صورة JPEG حقيقية وليس صفحة خطأ أو ملف غير مكتمل
-                        // توقيع JPEG يبدأ دائماً بـ FF D8 FF
-                        const isRealJpeg = buf.length > 15000 && buf[0] === 0xFF && buf[1] === 0xD8 && buf[2] === 0xFF;
-                        if (isRealJpeg) {
+                        // التأكد القاطع أن الملف صورة حقيقية (JPEG أو PNG كقمر الضباب) وليس صفحة خطأ HTML
+                        const isJpeg = buf.length > 15000 && buf[0] === 0xFF && buf[1] === 0xD8 && buf[2] === 0xFF;
+                        const isPng = buf.length > 15000 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4E && buf[3] === 0x47;
+                        if (isJpeg || isPng) {
                             fs.writeFileSync(destPath, buf);
                             downloaded++;
                             console.log(`✅ [سحابي] تم سحب واعتماد: ${filename}`);

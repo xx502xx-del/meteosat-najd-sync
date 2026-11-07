@@ -134,7 +134,7 @@ async function runCloudSync() {
             const filename = `sat_${cYyyy}_${cMm}_${cDd}_${cHh}_${cMin}_15518_${t.code}.jpg`;
             const destPath = path.join(t.dir, filename);
 
-            if (!fs.existsSync(destPath) && !existingFiles.has(filename)) {
+            if (!fs.existsSync(destPath)) {
                 try {
                     const b64 = await page.evaluate(async (url) => {
                         try {

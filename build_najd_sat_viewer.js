@@ -40,7 +40,14 @@ const mapFrames = (folder, code) => {
     });
 };
 
-const nonaData = {
+let existingManifest = null;
+try {
+    if (fs.existsSync(path.join(__dirname, 'nona_manifest.json'))) {
+        existingManifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'nona_manifest.json'), 'utf8'));
+    }
+} catch(e) {}
+
+const scannedData = {
     sat1: mapFrames(DIRS.sat1.folder, DIRS.sat1.code),
     sat2: mapFrames(DIRS.sat2.folder, DIRS.sat2.code),
     sat3: mapFrames(DIRS.sat3.folder, DIRS.sat3.code),
@@ -51,6 +58,19 @@ const nonaData = {
     sat8: mapFrames(DIRS.sat8.folder, DIRS.sat8.code),
     sat9: mapFrames(DIRS.sat9.folder, DIRS.sat9.code)
 };
+
+const nonaData = {};
+Object.keys(DIRS).forEach(k => {
+    const map = new Map();
+    if (existingManifest && existingManifest[k]) {
+        existingManifest[k].forEach(item => map.set(item.file, item));
+    }
+    if (scannedData[k]) {
+        scannedData[k].forEach(item => map.set(item.file, item));
+    }
+    const sorted = Array.from(map.values()).sort((a, b) => a.file.localeCompare(b.file));
+    nonaData[k] = sorted.slice(-72);
+});
 
 fs.writeFileSync(path.join(__dirname, 'nona_manifest.json'), JSON.stringify(nonaData, null, 2));
 const publicDir = path.join(__dirname, 'public');

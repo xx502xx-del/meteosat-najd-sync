@@ -188,6 +188,32 @@ async function runCloudSync() {
         }
     }
 
+    // دمج تراكمي ذكي: الحفاظ على سجل الـ 12 ساعة من مانيفست كلاودفلير مع الفريمات الجديدة
+    const buildScript = require('./build_najd_sat_viewer.js');
+    let localManifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'nona_manifest.json'), 'utf8'));
+
+    if (onlineManifest) {
+        Object.keys(onlineManifest).forEach(satKey => {
+            const onlineList = onlineManifest[satKey] || [];
+            const currentList = localManifest[satKey] || [];
+            const mergedMap = new Map();
+
+            // إضافة الفريمات السابقة
+            onlineList.forEach(item => mergedMap.set(item.file, item));
+            // إضافة الفريمات الجديدة المكتشفة
+            currentList.forEach(item => mergedMap.set(item.file, item));
+
+            // ترتيب الفريمات تصاعدياً بحسب الوقت
+            const sorted = Array.from(mergedMap.values()).sort((a, b) => a.file.localeCompare(b.file));
+
+            // الاحتفاظ بأحدث 72 فريم كحد أقصى (12 ساعة كاملة بمعدل فريم كل 10 دقائق)
+            localManifest[satKey] = sorted.slice(-72);
+        });
+
+        fs.writeFileSync(path.join(__dirname, 'nona_manifest.json'), JSON.stringify(localManifest, null, 2));
+        fs.writeFileSync(path.join(publicDir, 'nona_manifest.json'), JSON.stringify(localManifest));
+    }
+
     const { execSync } = require('child_process');
     execSync(`node "${path.join(__dirname, 'build_najd_sat_viewer.js')}"`, { stdio: 'inherit' });
     fs.copyFileSync(path.join(__dirname, 'viewer.html'), path.join(publicDir, 'index.html'));

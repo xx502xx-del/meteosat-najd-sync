@@ -557,6 +557,11 @@ const htmlContent = `<!DOCTYPE html>
             box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
         }
 
+        /* شريط التاريخ في نسخة الموبايل */
+        #mobile-date-banner {
+            display: none;
+        }
+
         /* ==========================================
            RESPONSIVE MOBILE VIEW (شاشات الهواتف)
            تحويل الشريط السفلي إلى شريط زجاجي عائم (Floating Glassmorphism Bar)
@@ -578,11 +583,38 @@ const htmlContent = `<!DOCTYPE html>
             #map-container {
                 top: 48px;
                 bottom: 0;
-                padding: 8px 12px 115px 12px; /* متنفس جانبي وسفلي يمنع اقتطاع أطراف الصورة */
+                padding: 6px 12px 115px 12px;
                 display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                box-sizing: border-box;
+            }
+
+            #mobile-date-banner {
+                display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                box-sizing: border-box;
+                gap: 6px;
+                background: rgba(17, 24, 39, 0.72);
+                border: 1px solid rgba(56, 189, 248, 0.25);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-radius: 20px;
+                padding: 4px 12px;
+                margin: 4px auto 8px auto;
+                font-size: 10.5px;
+                font-weight: 500;
+                color: #e0f2fe;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 10px rgba(56, 189, 248, 0.1);
+                direction: rtl;
+                letter-spacing: 0.1px;
+                z-index: 20;
+            }
+
+            #mobile-date-banner .cal-icon {
+                font-size: 11px;
+                filter: drop-shadow(0 0 3px rgba(56, 189, 248, 0.5));
             }
 
             .image-stage {
@@ -741,6 +773,12 @@ const htmlContent = `<!DOCTYPE html>
 
     <!-- SATELLITE VIEWER CANVAS -->
     <main id="map-container">
+        <!-- شريط التاريخ المحدث الهجري والميلادي في نسخة الموبايل -->
+        <div id="mobile-date-banner">
+            <span class="cal-icon">📅</span>
+            <span id="mobile-date-text"></span>
+        </div>
+
         <div class="image-stage">
             <!-- Frame Time Indicator (داخل حدود صورة القمر دائماً) -->
             <div id="time-hud">${initialDate}</div>
@@ -1007,6 +1045,28 @@ const htmlContent = `<!DOCTYPE html>
     window.addEventListener('touchend', () => {
         isPulling = false;
     }, { passive: true });
+
+    // تحديث التاريخ الهجري والميلادي لنسخة الموبايل تلقائياً
+    function updateMobileDate() {
+        try {
+            const now = new Date();
+            const hijriFmt = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura-nu-latn', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+            const gregFmt = new Intl.DateTimeFormat('ar-SA-u-nu-latn', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+            const dateStr = hijriFmt.format(now) + ' الموافق ' + gregFmt.format(now) + ' م';
+            const el = document.getElementById('mobile-date-text');
+            if (el) el.textContent = dateStr;
+        } catch(e) {}
+    }
+    updateMobileDate();
 
     // Start at latest frame without auto-play
     showFrame(currentIndex);

@@ -1076,7 +1076,7 @@ const htmlContent = `<!DOCTYPE html>
                 month: 'long',
                 year: 'numeric'
             });
-            const dateStr = hijriFmt.format(now) + ' الموافق ' + gregFmt.format(now) + ' م';
+            const dateStr = (hijriFmt.format(now) + ' الموافق ' + gregFmt.format(now) + ' م').replace('،', '');
             const el = document.getElementById('mobile-date-text');
             if (el) el.textContent = dateStr;
         } catch(e) {}

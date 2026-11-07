@@ -895,20 +895,10 @@
         currentIndex = Math.max(0, Math.min(index, list.length - 1));
 
         const frame = list[currentIndex];
-        
-        // التحميل المسبق الصامت قبل استبدال العرض لمنع وميض الخط الأفقي
-        const tempImg = new Image();
-        tempImg.onload = () => {
-            satImg.src = frame.file;
-            timeHud.textContent = frame.date + ' ' + frame.time;
-            timeLabel.textContent = frame.time.replace(' KSA', '');
-            timelineSlider.value = currentIndex;
-        };
-        tempImg.onerror = () => {
-            // في حال كان الفريم قيد الرفع أو غير مكتمل بعد، البقاء على الصورة السابقة دون انهيار العرض
-            console.warn('Frame pending full render:', frame.file);
-        };
-        tempImg.src = frame.file;
+        satImg.src = frame.file;
+        timeHud.textContent = frame.date + ' ' + frame.time;
+        timeLabel.textContent = frame.time.replace(' KSA', '');
+        timelineSlider.value = currentIndex;
     }
 
     function togglePlay() {

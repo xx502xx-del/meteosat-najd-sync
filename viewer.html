@@ -640,14 +640,16 @@
 
             /* تصغير بوكس التوقيت للجوال ليكون ملموماً وناعماً جداً وأصغر حجماً */
             #time-hud {
-                top: 4px;
-                right: 4px;
-                padding: 1px 3.5px;
-                font-size: 6.5px;
-                border-radius: 2.5px;
-                letter-spacing: 0px;
-                background: rgba(15, 23, 42, 0.75);
-                border: 1px solid rgba(255, 255, 255, 0.1);
+                top: 4px !important;
+                right: 4px !important;
+                padding: 1px 3px !important;
+                font-size: 6px !important;
+                transform: scale(0.85);
+                transform-origin: top right;
+                border-radius: 3px !important;
+                letter-spacing: 0px !important;
+                background: rgba(15, 23, 42, 0.75) !important;
+                border: 1px solid rgba(255, 255, 255, 0.12) !important;
                 line-height: 1.15 !important;
             }
 

@@ -654,12 +654,17 @@ const htmlContent = `<!DOCTYPE html>
 
             .image-stage {
                 max-width: 100%;
-                max-height: 100%;
+                max-height: calc(100vh - 240px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
                 position: relative;
+                border: 1px solid rgba(56, 189, 248, 0.35);
+                border-radius: 10px;
+                box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(56, 189, 248, 0.15);
+                box-sizing: border-box;
+                background: #070a12;
             }
 
             #satellite-image {
@@ -668,8 +673,7 @@ const htmlContent = `<!DOCTYPE html>
                 width: auto;
                 height: auto;
                 object-fit: scale-down;
-                border-radius: 10px;
-                box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(56, 189, 248, 0.12);
+                border-radius: 9px;
                 box-sizing: border-box;
                 display: block;
                 transition: transform 0.28s cubic-bezier(0.25, 1, 0.5, 1);

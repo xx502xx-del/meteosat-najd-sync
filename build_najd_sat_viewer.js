@@ -1091,6 +1091,7 @@ const htmlContent = `<!DOCTYPE html>
     let startPanX = 0, startPanY = 0;
     let isPanning = false;
     let hasMoved = false;
+    let touchStartTime = 0;
 
     function applyBoundedPan() {
         // حساب الأبعاد الفعلية الدقيقة المعروضة لصورة القمر نفسها
@@ -1110,15 +1111,18 @@ const htmlContent = `<!DOCTYPE html>
     }
 
     satImg.addEventListener("touchstart", (e) => {
-        if (window.innerWidth > 768 || !isZoomed) return;
+        if (window.innerWidth > 768) return;
         if (e.touches.length === 1) {
-            isPanning = true;
+            touchStartTime = Date.now();
             hasMoved = false;
             panStartX = e.touches[0].clientX;
             panStartY = e.touches[0].clientY;
             startPanX = currentPanX;
             startPanY = currentPanY;
-            satImg.style.transition = "none";
+            if (isZoomed) {
+                isPanning = true;
+                satImg.style.transition = "none";
+            }
         }
     }, { passive: false });
 
@@ -1127,7 +1131,7 @@ const htmlContent = `<!DOCTYPE html>
         if (e.touches.length === 1) {
             const dx = e.touches[0].clientX - panStartX;
             const dy = e.touches[0].clientY - panStartY;
-            if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
+            if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
                 hasMoved = true;
                 if (e.cancelable) e.preventDefault();
             }
@@ -1137,7 +1141,7 @@ const htmlContent = `<!DOCTYPE html>
         }
     }, { passive: false });
 
-    window.addEventListener("touchend", () => {
+    window.addEventListener("touchend", (e) => {
         if (!isPanning) return;
         isPanning = false;
         satImg.style.transition = "transform 0.28s cubic-bezier(0.25, 1, 0.5, 1)";
@@ -1145,7 +1149,12 @@ const htmlContent = `<!DOCTYPE html>
 
     satImg.addEventListener("click", (e) => {
         if (window.innerWidth > 768) return;
-        if (hasMoved) return;
+        const touchDuration = Date.now() - touchStartTime;
+
+        // إذا كان المستخدم في وضع الزوم وقام بأي تحريك أو استمرت لمسته أكثر من 200 ميلي ثانية، نمنع إلغاء الزوم نهائياً!
+        if (isZoomed && (hasMoved || touchDuration > 200)) {
+            return;
+        }
 
         if (!isZoomed) {
             const stage = satImg.parentElement;
@@ -1161,6 +1170,7 @@ const htmlContent = `<!DOCTYPE html>
             satImg.classList.add("is-zoomed");
             isZoomed = true;
         } else {
+            // نقرة سريعة وخاطفة فقط هي التي تعيد الصورة لوضعها الطبيعي
             satImg.style.transition = "transform 0.28s cubic-bezier(0.25, 1, 0.5, 1)";
             satImg.style.transform = "scale(1.0) translate(0px, 0px)";
             satImg.classList.remove("is-zoomed");

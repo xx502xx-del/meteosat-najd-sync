@@ -574,6 +574,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                overflow: hidden;
+                position: relative;
             }
 
             #satellite-image {
@@ -586,6 +588,14 @@
                 box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(56, 189, 248, 0.12);
                 box-sizing: border-box;
                 display: block;
+                transition: transform 0.28s cubic-bezier(0.25, 1, 0.5, 1);
+                cursor: zoom-in;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            #satellite-image.is-zoomed {
+                transform: scale(2.0);
+                cursor: zoom-out;
             }
 
             /* الشريط الزجاجي أسفل صورة القمر بمسافة سطرين واضحة ومستقلة */
@@ -976,6 +986,26 @@
             (e.metaKey && e.altKey && (e.key === 'i' || e.key === 'I' || e.key === 'u' || e.key === 'U' || e.key === 'c' || e.key === 'C'))) {
             e.preventDefault();
             return false;
+        }
+    });
+
+    // ميزة التكبير الذكي بالنقرة الواحدة المخصصة للجوال فقط (Mobile Smart Zoom)
+    let isZoomed = false;
+    satImg.addEventListener("click", (e) => {
+        if (window.innerWidth > 768) return;
+        const rect = satImg.getBoundingClientRect();
+        const xPercent = ((e.clientX - rect.left) / rect.width) * 100;
+        const yPercent = ((e.clientY - rect.top) / rect.height) * 100;
+        if (!isZoomed) {
+            satImg.style.transformOrigin = xPercent + "% " + yPercent + "%";
+            satImg.classList.add("is-zoomed");
+            isZoomed = true;
+        } else {
+            satImg.classList.remove("is-zoomed");
+            setTimeout(() => {
+                satImg.style.transformOrigin = "center center";
+            }, 280);
+            isZoomed = false;
         }
     });
 

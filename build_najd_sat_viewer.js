@@ -722,16 +722,26 @@ const htmlContent = `<!DOCTYPE html>
                 gap: 8px;
             }
 
-            /* تصغير بوكس التوقيت للجوال ليكون ملموماً وناعماً جداً داخل الصورة */
+            /* إعادة بوكس التوقيت للجوال لتصميمه المعتمد الأصلي الزجاجي الأنيق */
             #time-hud {
-                top: 5px;
-                right: 5px;
-                padding: 1.5px 4.5px;
-                font-size: 7.5px;
-                border-radius: 3px;
-                letter-spacing: 0.1px;
-                background: rgba(15, 23, 42, 0.75);
-                border: 1px solid rgba(255, 255, 255, 0.1);
+                position: absolute;
+                top: 7px;
+                right: 7px;
+                padding: 3px 7px;
+                font-size: 8.5px;
+                font-weight: 700;
+                line-height: normal !important;
+                height: auto !important;
+                border-radius: 5px;
+                letter-spacing: 0.2px;
+                color: #38bdf8;
+                background: rgba(15, 23, 42, 0.85);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+                z-index: 10;
+                display: block !important;
             }
 
             /* تحسين زر قائمة الأقمار في الجوال ليظل ثابتاً ولا يرتفع أو يشوه الهيدر */

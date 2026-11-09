@@ -1232,7 +1232,7 @@ const htmlContent = `<!DOCTYPE html>
                 month: 'long',
                 year: 'numeric'
             });
-            const gregFmt = new Intl.DateTimeFormat('ar-SA-u-nu-latn', {
+            const gregFmt = new Intl.DateTimeFormat('ar-SA-u-ca-gregory-nu-latn', {
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric'

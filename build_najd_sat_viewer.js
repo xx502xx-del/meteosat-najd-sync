@@ -1084,16 +1084,18 @@ const htmlContent = `<!DOCTYPE html>
     let hasMoved = false;
 
     function applyBoundedPan() {
-        const stage = satImg.parentElement;
-        const stageW = stage.clientWidth;
-        const stageH = stage.clientHeight;
-        const maxPanX = (stageW * (2.0 - 1)) / 2; // أقصى حد للسحب يميناً ويساراً بدون خروج الصورة عن الإطار
-        const maxPanY = (stageH * (2.0 - 1)) / 2; // أقصى حد للسحب أعلى وأسفل بدون خروج الصورة عن الإطار
+        // حساب الأبعاد الفعلية الدقيقة المعروضة لصورة القمر نفسها
+        const imgW = satImg.offsetWidth || satImg.clientWidth;
+        const imgH = satImg.offsetHeight || satImg.clientHeight;
+        // عند scale(2.0)، كل نصف يتمدد بمقدار imgW/2 أو imgH/2. نقسم على 2 لتعويض translate(x / 2.0)
+        // وبذلك أقصى إزاحة مطابقة لـ 100% من أطراف الصورة دون السماح بأي بكسل فراغ خارجي إطلاقاً
+        const limitX = imgW / 2;
+        const limitY = imgH / 2;
 
-        if (currentPanX > maxPanX) currentPanX = maxPanX;
-        if (currentPanX < -maxPanX) currentPanX = -maxPanX;
-        if (currentPanY > maxPanY) currentPanY = maxPanY;
-        if (currentPanY < -maxPanY) currentPanY = -maxPanY;
+        if (currentPanX > limitX) currentPanX = limitX;
+        if (currentPanX < -limitX) currentPanX = -limitX;
+        if (currentPanY > limitY) currentPanY = limitY;
+        if (currentPanY < -limitY) currentPanY = -limitY;
 
         satImg.style.transform = "scale(2.0) translate(" + (currentPanX / 2.0) + "px, " + (currentPanY / 2.0) + "px)";
     }

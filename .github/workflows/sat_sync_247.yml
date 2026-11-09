@@ -5,6 +5,10 @@ on:
     - cron: '*/5 * * * *'
   workflow_dispatch:
 
+concurrency:
+  group: meteosat-najd-sync
+  cancel-in-progress: false
+
 jobs:
   sync_and_deploy:
     runs-on: ubuntu-latest
@@ -37,8 +41,8 @@ jobs:
       - name: 🔄 تشغيل حلقة المزامنة التالية فوراً لضمان التدفق الصاروخي المستمر
         if: always()
         run: |
-          sleep 180 # انتظار 3 دقائق ثم إطلاق الفحص التالي تلقائياً
-          curl -X POST \
+          sleep 120 # انتظار دقيقتين ثم إطلاق الفحص التالي بسلاسة تامة
+          curl -s -X POST \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: token ${{ secrets.GH_ACTION_TOKEN }}" \
             https://api.github.com/repos/xx502xx-del/meteosat-najd-sync/actions/workflows/sat_sync_247.yml/dispatches \

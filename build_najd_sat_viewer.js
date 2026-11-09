@@ -661,6 +661,9 @@ const htmlContent = `<!DOCTYPE html>
                 box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(56, 189, 248, 0.12) !important;
                 background: #070a12;
                 line-height: 0;
+                touch-action: none !important;
+                user-select: none;
+                -webkit-user-select: none;
             }
 
             #satellite-image {
@@ -677,6 +680,9 @@ const htmlContent = `<!DOCTYPE html>
                 display: block;
                 transition: transform 0.28s cubic-bezier(0.25, 1, 0.5, 1);
                 cursor: zoom-in;
+                touch-action: none !important;
+                user-select: none;
+                -webkit-user-select: none;
                 -webkit-tap-highlight-color: transparent;
             }
 
@@ -1174,6 +1180,8 @@ const htmlContent = `<!DOCTYPE html>
     let isPulling = false;
 
     window.addEventListener('touchstart', (e) => {
+        // إذا كان المستخدم في وضع الزوم أو يلمس داخل صورة القمر، نعطل ميزة سحب التحديث تماماً لمنع الخروج
+        if (isZoomed || e.target.closest('.image-stage')) return;
         if (e.touches.length === 1 && window.scrollY <= 5) {
             touchStartY = e.touches[0].clientY;
             touchStartX = e.touches[0].clientX;
@@ -1182,7 +1190,7 @@ const htmlContent = `<!DOCTYPE html>
     }, { passive: true });
 
     window.addEventListener('touchmove', (e) => {
-        if (!isPulling || e.touches.length !== 1) return;
+        if (isZoomed || !isPulling || e.touches.length !== 1) return;
         const currentY = e.touches[0].clientY;
         const currentX = e.touches[0].clientX;
         const deltaY = currentY - touchStartY;

@@ -2,7 +2,7 @@ name: 🛰️ Meteosat Najd 24/7 Cloud Auto-Sync
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 concurrency:
@@ -23,11 +23,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: 📦 تثبيت Chromium الكامل مع Puppeteer
+      - name: 📦 تثبيت مكتبات السحب وتأمين المتصفح المستقر
         run: |
           npm init -y
-          npx @puppeteer/browsers install chrome@stable
-          npm install puppeteer
+          npm install puppeteer --save
 
       - name: 🌐 تنفيذ السحب السحابي وتحديث Cloudflare
         env:
@@ -41,7 +40,7 @@ jobs:
       - name: 🔄 تشغيل حلقة المزامنة التالية فوراً لضمان التدفق الصاروخي المستمر
         if: always()
         run: |
-          sleep 120 # انتظار دقيقتين ثم إطلاق الفحص التالي بسلاسة تامة
+          sleep 90 # انتظار 90 ثانية لتدفق مستمر وصاروخي بدون أي تأخير
           curl -s -X POST \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: token ${{ secrets.GH_ACTION_TOKEN }}" \

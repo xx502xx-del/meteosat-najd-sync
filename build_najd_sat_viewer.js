@@ -1249,16 +1249,27 @@ const htmlContent = `<!DOCTYPE html>
     preloadSatImages(currentSat); // بدء التحميل المسبق الصامت للقمر الافتراضي فور فتح الصفحة
 
     // ==========================================
-    // AUTO-POLLING: فحص وتحديث الفريمات الجديدة تلقائياً بسرعة فائقة كل 15 ثانية
+    // البث المباشر الدائم (Always LIVE) - نظام بداية المشروع الأصلي التلقائي
     // ==========================================
-    setInterval(async () => {
+    let isLiveTracking = true; // وضع المباشر نشط دائماً طالما لم يشغل المستخدم اللوب
+
+    timelineSlider.addEventListener('input', () => {
+        const list = nonaData[currentSat] || [];
+        // إذا رجع المشاهد يدوياً لآخر فريم، يعود المباشر للعمل فوراً
+        isLiveTracking = (parseInt(timelineSlider.value) >= list.length - 1);
+    });
+
+    btnLatest.addEventListener('click', () => {
+        isLiveTracking = true;
+    });
+
+    async function checkLatestSatFrames() {
         try {
             const res = await fetch('nona_manifest.json?t=' + Date.now());
             if (res.ok) {
                 const freshData = await res.json();
                 let hasUpdate = false;
                 
-                // التحقق مما إذا كان هناك فريمات أحدث
                 for (const satKey of Object.keys(freshData)) {
                     const currentLen = (nonaData[satKey] || []).length;
                     const freshLen = (freshData[satKey] || []).length;
@@ -1269,27 +1280,41 @@ const htmlContent = `<!DOCTYPE html>
                 }
 
                 if (hasUpdate) {
-                    console.log('⚡ تم التقاط تحديث جديد للأقمار ودمجه في التايم لاين تلقائياً!');
                     const list = nonaData[currentSat] || [];
                     timelineSlider.max = Math.max(0, list.length - 1);
 
-                    // وميض أخضر خفيف على زر LIVE لإعلام المستخدم بوصول فريم رصدي جديد
+                    // وميض أخضر على زر LIVE
                     btnLatest.style.boxShadow = '0 0 15px #22c55e';
                     btnLatest.style.borderColor = '#22c55e';
                     setTimeout(() => {
                         btnLatest.style.boxShadow = '';
                         btnLatest.style.borderColor = '';
-                    }, 3500);
+                    }, 3000);
 
-                    // إذا كان المشاهد في وضع التوقف التام عند آخر صورة، نحدثها له مباشرة
-                    if (!isPlaying && currentIndex >= list.length - 2) {
+                    // في وضع البث المباشر (Always LIVE): تظهر أحدث صورة فوراً بدون أي شروط!
+                    if (!isPlaying && isLiveTracking) {
                         currentIndex = list.length - 1;
                         showFrame(currentIndex);
                     }
                 }
             }
         } catch (e) {}
-    }, 15000); // فحص راداري سريع كل 15 ثانية فقط لاقتناص أي تحديث فوراً!
+    }
+
+    // فحص راداري سريع كل 15 ثانية
+    setInterval(checkLatestSatFrames, 15000);
+
+    // إذا عاد المستخدم للصفحة أو استيقظ الهاتف من السكون، يفحص فوراً ويجلب أحدث صورة حية لحظياً
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && !isPlaying && isLiveTracking) {
+            checkLatestSatFrames();
+        }
+    });
+    window.addEventListener('focus', () => {
+        if (!isPlaying && isLiveTracking) {
+            checkLatestSatFrames();
+        }
+    });
 </script>
 
 </body>

@@ -10,6 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        @font-face {
+            font-family: 'XQ55';
+            src: url('xq55.ttf?v=1') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         html { width: 100%; height: 100%; }
         body { 
             margin: 0; padding: 0; 
@@ -308,6 +315,130 @@
             pointer-events: none;
             z-index: 10;
             white-space: nowrap;
+        }
+
+        /* زر إظهار/إخفاء المدن — محقون أسفل شريط الوقت مباشرة متطابق مع الهوية البصرية */
+        #btn-cities-toggle {
+            position: absolute;
+            top: 34px;
+            right: 10px;
+            background: rgba(15, 23, 42, 0.78);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 2.5px 8px;
+            border-radius: 5px;
+            font-family: 'XQ55', system-ui, -apple-system, sans-serif;
+            font-size: 9.5px;
+            font-weight: 700;
+            color: #38bdf8;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 10px rgba(56, 189, 248, 0.15);
+            cursor: pointer;
+            z-index: 25;
+            white-space: nowrap;
+            user-select: none;
+            -webkit-user-select: none;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            line-height: 1.2;
+        }
+
+        #btn-cities-toggle:hover {
+            background: rgba(56, 189, 248, 0.2);
+            border-color: #38bdf8;
+            color: #ffffff;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+        }
+
+        #btn-cities-toggle.is-hidden {
+            opacity: 0.55;
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(255, 255, 255, 0.15);
+            color: #94a3b8;
+            box-shadow: none;
+        }
+
+        /* طبقة مسميات المدن المسقطة 100% بنظام النسب المئوية */
+        #cities-overlay-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 15;
+            line-height: normal;
+            transition: opacity 0.25s ease;
+        }
+
+        #cities-overlay-layer.cities-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .city-marker {
+            position: absolute;
+            pointer-events: none;
+            transform-origin: 0 0;
+        }
+
+        .city-node-item {
+            position: relative;
+            width: 6px;
+            height: 6px;
+        }
+
+        .city-node-item .city-dot {
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.96);
+            border: 1px solid #000;
+            border-radius: 50%;
+            box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 1);
+        }
+
+        .city-node-item .city-label {
+            position: absolute;
+            font-size: 8px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 3px #000, 0 0 6px rgba(0, 0, 0, 0.9),
+                        1px 0 0 rgba(0, 0, 0, 0.5), -1px 0 0 rgba(0, 0, 0, 0.5);
+            font-family: 'XQ55', system-ui, -apple-system, sans-serif;
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+            pointer-events: none;
+        }
+
+        .city-label.pos-bottom {
+            left: -47px;
+            top: 9px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .city-label.pos-top {
+            left: -47px;
+            bottom: 9px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .city-label.pos-right {
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+        }
+
+        .city-label.pos-left {
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: right;
         }
 
         /* ==========================================
@@ -659,6 +790,18 @@
                 line-height: 1.15 !important;
             }
 
+            /* زر المدن في الجوال يقع أسفل بوكس الوقت مباشرة دون أي مساس بتصميم الشاشة */
+            #btn-cities-toggle {
+                top: 22px !important;
+                right: 4px !important;
+                padding: 1px 4px !important;
+                font-size: 7.5px !important;
+                transform: scale(0.85);
+                transform-origin: top right;
+                border-radius: 3px !important;
+                gap: 2px !important;
+            }
+
             /* تحسين زر قائمة الأقمار في الجوال ليظل ثابتاً ولا يرتفع أو يشوه الهيدر */
             .model-dropdown-btn {
                 padding: 4px 8px;
@@ -758,8 +901,17 @@
             <!-- Frame Time Indicator (داخل حدود صورة القمر دائماً) -->
             <div id="time-hud">2026/11/07 14:10 KSA</div>
 
+            <!-- زر إظهار/إخفاء المدن أسفل شريط التوقيت مباشرة -->
+            <button id="btn-cities-toggle" title="إظهار / إخفاء مسميات المدن">
+                <span>🗺️</span>
+                <span>المدن</span>
+            </button>
+
             <!-- The Image Element -->
             <img id="satellite-image" src="satellite_images/sat_2026_11_07_11_10_15518_1427.jpg" alt="Najd Sat Feed">
+
+            <!-- طبقة مسميات المدن ونقطها المسقطة بدقة 100% -->
+            <div id="cities-overlay-layer"></div>
         </div>
     </main>
 
@@ -1231,6 +1383,84 @@
             checkLatestSatFrames();
         }
     });
+
+    // ══════════════════════════════════════════════════════════════════
+    // طبقة المدن الـ 35 المعتمدة بالمليمتر مع زر التبديل
+    // ══════════════════════════════════════════════════════════════════
+    const VERIFIED_CITIES = [
+        { "id": "hail", "name": "حائل", "x": 201, "y": 72, "pos": "top" },
+        { "id": "hafr", "name": "الحفر", "x": 422, "y": 23, "pos": "bottom" },
+        { "id": "dawasir", "name": "الوادي", "x": 360, "y": 477, "pos": "top" },
+        { "id": "city_1", "name": "أبها", "x": 244, "y": 600, "pos": "top" },
+        { "id": "city_2", "name": "الباحة", "x": 187, "y": 500, "pos": "right" },
+        { "id": "city_3", "name": "تثليث", "x": 281, "y": 529, "pos": "left" },
+        { "id": "city_4", "name": "يبرين", "x": 582, "y": 317, "pos": "bottom" },
+        { "id": "city_5", "name": "الهفوف", "x": 614, "y": 195, "pos": "bottom" },
+        { "id": "city_6", "name": "الدوحة", "x": 716, "y": 198, "pos": "left" },
+        { "id": "city_7", "name": "المنامة", "x": 665, "y": 143, "pos": "left" },
+        { "id": "city_8", "name": "الدمام", "x": 637, "y": 133, "pos": "right" },
+        { "id": "city_9", "name": "الهضب", "x": 316, "y": 425, "pos": "top" },
+        { "id": "city_10", "name": "بيشة", "x": 239, "y": 492, "pos": "bottom" },
+        { "id": "city_11", "name": "عفيف", "x": 261, "y": 281, "pos": "right" },
+        { "id": "city_12", "name": "الزبيرة", "x": 303, "y": 46, "pos": "top" },
+        { "id": "city_13", "name": "العقلة", "x": 224, "y": 171, "pos": "right" },
+        { "id": "city_14", "name": "ظلم", "x": 225, "y": 350, "pos": "right" },
+        { "id": "city_15", "name": "جدة", "x": 62, "y": 411, "pos": "right" },
+        { "id": "city_16", "name": "مكة", "x": 100, "y": 421, "pos": "right" },
+        { "id": "city_17", "name": "الطائف", "x": 134, "y": 427, "pos": "left" },
+        { "id": "city_18", "name": "الافلاج", "x": 464, "y": 374, "pos": "top" },
+        { "id": "city_19", "name": "تيماء", "x": 31, "y": 64, "pos": "top" },
+        { "id": "city_20", "name": "المدينة", "x": 91, "y": 247, "pos": "top" },
+        { "id": "city_21", "name": "رابغ", "x": 60, "y": 341, "pos": "bottom" },
+        { "id": "city_22", "name": "ينبع", "x": 12, "y": 264, "pos": "top" },
+        { "id": "city_23", "name": "رنية", "x": 271, "y": 424, "pos": "bottom" },
+        { "id": "city_24", "name": "الخفجي", "x": 551, "y": 17, "pos": "left" },
+        { "id": "city_25", "name": "الحصاة", "x": 352, "y": 356, "pos": "left" },
+        { "id": "city_26", "name": "الرين", "x": 388, "y": 293, "pos": "right" },
+        { "id": "city_27", "name": "الرياض", "x": 464, "y": 236, "pos": "top" },
+        { "id": "city_28", "name": "الحوطة", "x": 471, "y": 304, "pos": "left" },
+        { "id": "city_29", "name": "الخرخير", "x": 694, "y": 559, "pos": "right" },
+        { "id": "city_30", "name": "المجمعة", "x": 392, "y": 169, "pos": "left" },
+        { "id": "city_31", "name": "الدوادمي", "x": 339, "y": 245, "pos": "left" },
+        { "id": "city_32", "name": "عنيزة", "x": 319, "y": 155, "pos": "top" }
+    ];
+
+    const citiesContainer = document.getElementById('cities-overlay-layer');
+    const btnCitiesToggle = document.getElementById('btn-cities-toggle');
+    let citiesVisible = true;
+
+    if (citiesContainer) {
+        citiesContainer.innerHTML = '';
+        VERIFIED_CITIES.forEach(city => {
+            const marker = document.createElement('div');
+            marker.className = 'city-marker';
+            const pctX = (city.x / 760) * 100;
+            const pctY = (city.y / 616) * 100;
+            marker.style.left = pctX + '%';
+            marker.style.top = pctY + '%';
+            marker.innerHTML = `
+                <div class="city-node-item" style="transform: translate(-3px, -3px);">
+                    <div class="city-dot"></div>
+                    <div class="city-label pos-${city.pos}">${city.name}</div>
+                </div>
+            `;
+            citiesContainer.appendChild(marker);
+        });
+    }
+
+    if (btnCitiesToggle) {
+        btnCitiesToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            citiesVisible = !citiesVisible;
+            if (citiesVisible) {
+                citiesContainer.classList.remove('cities-hidden');
+                btnCitiesToggle.classList.remove('is-hidden');
+            } else {
+                citiesContainer.classList.add('cities-hidden');
+                btnCitiesToggle.classList.add('is-hidden');
+            }
+        });
+    }
 </script>
 
 </body>

@@ -18,15 +18,15 @@ jobs:
       - name: 📥 جلب كود المشروع
         uses: actions/checkout@v4
 
-      - name: ⚙️ إعداد بيئة Node.js
+      - name: ⚙️ إعداد بيئة Node.js المتوافقة مع أحدث معايير GitHub
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: 📦 تثبيت مكتبات السحب وتأمين المتصفح المستقر
         run: |
           npm init -y
-          npm install puppeteer --save
+          npm install --no-audit --no-fund puppeteer
 
       - name: 🌐 تنفيذ السحب السحابي وتحديث Cloudflare
         env:

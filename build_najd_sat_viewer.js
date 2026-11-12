@@ -404,7 +404,7 @@ const htmlContent = `<!DOCTYPE html>
         /* زر إظهار/إخفاء المدن — مربع صغير خفيف بهوية بصرية فاخرة أسفل شريط الوقت مباشرة */
         #btn-cities-toggle {
             position: absolute;
-            top: 34px;
+            top: 29px;
             right: 10px;
             width: 22px;
             height: 22px;
@@ -884,7 +884,7 @@ const htmlContent = `<!DOCTYPE html>
 
             /* زر المدن في الجوال: مربع أنيق خفيف أسفل بوكس الوقت مباشرة */
             #btn-cities-toggle {
-                top: 24px !important;
+                top: 19px !important;
                 right: 4px !important;
                 width: 17px !important;
                 height: 17px !important;

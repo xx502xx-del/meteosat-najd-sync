@@ -401,47 +401,54 @@ const htmlContent = `<!DOCTYPE html>
             white-space: nowrap;
         }
 
-        /* زر إظهار/إخفاء المدن — محقون أسفل شريط الوقت مباشرة متطابق مع الهوية البصرية */
+        /* زر إظهار/إخفاء المدن — مربع صغير خفيف بهوية بصرية فاخرة أسفل شريط الوقت مباشرة */
         #btn-cities-toggle {
             position: absolute;
             top: 34px;
             right: 10px;
+            width: 22px;
+            height: 22px;
             background: rgba(15, 23, 42, 0.78);
             border: 1px solid rgba(56, 189, 248, 0.35);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            padding: 2.5px 8px;
+            padding: 0;
             border-radius: 5px;
-            font-family: 'XQ55', system-ui, -apple-system, sans-serif;
-            font-size: 9.5px;
-            font-weight: 700;
-            color: #38bdf8;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 10px rgba(56, 189, 248, 0.15);
             cursor: pointer;
             z-index: 25;
-            white-space: nowrap;
             user-select: none;
             -webkit-user-select: none;
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
-            gap: 4px;
-            line-height: 1.2;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        #btn-cities-toggle .icon-emoji {
+            font-size: 12px;
+            line-height: 1;
+            display: inline-block;
+            transition: transform 0.2s ease;
         }
 
         #btn-cities-toggle:hover {
             background: rgba(56, 189, 248, 0.2);
             border-color: #38bdf8;
-            color: #ffffff;
             box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
         }
 
+        #btn-cities-toggle:hover .icon-emoji {
+            transform: scale(1.1);
+        }
+
         #btn-cities-toggle.is-hidden {
-            opacity: 0.55;
-            background: rgba(15, 23, 42, 0.6);
+            opacity: 0.45;
+            background: rgba(15, 23, 42, 0.55);
             border-color: rgba(255, 255, 255, 0.15);
-            color: #94a3b8;
             box-shadow: none;
+            filter: grayscale(0.8);
         }
 
         /* طبقة مسميات المدن المسقطة 100% بنظام النسب المئوية */
@@ -875,16 +882,19 @@ const htmlContent = `<!DOCTYPE html>
                 line-height: 1.15 !important;
             }
 
-            /* زر المدن في الجوال يقع أسفل بوكس الوقت مباشرة دون أي مساس بتصميم الشاشة */
+            /* زر المدن في الجوال: مربع أنيق خفيف أسفل بوكس الوقت مباشرة */
             #btn-cities-toggle {
-                top: 22px !important;
+                top: 24px !important;
                 right: 4px !important;
-                padding: 1px 4px !important;
-                font-size: 7.5px !important;
-                transform: scale(0.85);
-                transform-origin: top right;
+                width: 17px !important;
+                height: 17px !important;
+                padding: 0 !important;
                 border-radius: 3px !important;
-                gap: 2px !important;
+                transform: none !important;
+            }
+
+            #btn-cities-toggle .icon-emoji {
+                font-size: 9.5px !important;
             }
 
             /* تحسين زر قائمة الأقمار في الجوال ليظل ثابتاً ولا يرتفع أو يشوه الهيدر */
@@ -986,10 +996,9 @@ const htmlContent = `<!DOCTYPE html>
             <!-- Frame Time Indicator (داخل حدود صورة القمر دائماً) -->
             <div id="time-hud">${initialDate}</div>
 
-            <!-- زر إظهار/إخفاء المدن أسفل شريط التوقيت مباشرة -->
+            <!-- زر إظهار/إخفاء المدن: مربع خفيف أيقوني أسفل شريط التوقيت مباشرة -->
             <button id="btn-cities-toggle" title="إظهار / إخفاء مسميات المدن">
-                <span>🗺️</span>
-                <span>المدن</span>
+                <span class="icon-emoji">🗺️</span>
             </button>
 
             <!-- The Image Element -->

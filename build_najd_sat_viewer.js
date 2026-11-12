@@ -489,6 +489,8 @@ const htmlContent = `<!DOCTYPE html>
             border: 1px solid #000;
             border-radius: 50%;
             box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.9), 0 0 1px rgba(0, 0, 0, 1);
+            transition: transform 0.28s cubic-bezier(0.25, 1, 0.5, 1);
+            transform-origin: center center;
         }
 
         .city-node-item .city-label {
@@ -506,9 +508,13 @@ const htmlContent = `<!DOCTYPE html>
             transition: font-size 0.28s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        /* عند الزوم (التكبير 2X): تصغير الخط تلقائياً ليبقى فائق النعومة والدقة دون أن يتضخم فوق السحب */
+        /* عند الزوم (التكبير 2X): تصغير الخط تلقائياً لـ 5px والنقطة لـ 55% لتبقى فائقة النعومة والدقة كرأس دبوس جغرافي مصغر دون أي تضخم */
         #cities-overlay-layer.is-zoomed .city-node-item .city-label {
             font-size: 5px;
+        }
+
+        #cities-overlay-layer.is-zoomed .city-node-item .city-dot {
+            transform: scale(0.55);
         }
 
         .city-label.pos-bottom {

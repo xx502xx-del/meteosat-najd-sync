@@ -397,7 +397,7 @@ const htmlContent = `<!DOCTYPE html>
             color: #38bdf8;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
             pointer-events: none;
-            z-index: 10;
+            z-index: 30;
             white-space: nowrap;
         }
 
@@ -416,7 +416,7 @@ const htmlContent = `<!DOCTYPE html>
             border-radius: 5px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 10px rgba(56, 189, 248, 0.15);
             cursor: pointer;
-            z-index: 25;
+            z-index: 35;
             user-select: none;
             -webkit-user-select: none;
             transition: all 0.2s ease;
@@ -508,7 +508,7 @@ const htmlContent = `<!DOCTYPE html>
             transition: font-size 0.28s cubic-bezier(0.25, 1, 0.5, 1), top 0.28s cubic-bezier(0.25, 1, 0.5, 1), bottom 0.28s cubic-bezier(0.25, 1, 0.5, 1), left 0.28s cubic-bezier(0.25, 1, 0.5, 1), right 0.28s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        /* عند الزوم (التكبير 2X): تصغير الخط لـ 5px والنقطة لـ 55% مع تقريب المسميات للنقطة درجة واحدة بدقة */
+        /* عند الزوم (التكبير 2X): تصغير الخط لـ 5px والنقطة لـ 55% مع تقريب المسميات للنقطة درجة إضافية بدقة */
         #cities-overlay-layer.is-zoomed .city-node-item .city-label {
             font-size: 5px;
         }
@@ -518,19 +518,19 @@ const htmlContent = `<!DOCTYPE html>
         }
 
         #cities-overlay-layer.is-zoomed .city-label.pos-bottom {
-            top: 7px;
+            top: 6px;
         }
 
         #cities-overlay-layer.is-zoomed .city-label.pos-top {
-            bottom: 7px;
+            bottom: 6px;
         }
 
         #cities-overlay-layer.is-zoomed .city-label.pos-right {
-            right: 8px;
+            right: 7px;
         }
 
         #cities-overlay-layer.is-zoomed .city-label.pos-left {
-            left: 8px;
+            left: 7px;
         }
 
         .city-label.pos-bottom {
@@ -908,6 +908,7 @@ const htmlContent = `<!DOCTYPE html>
                 background: rgba(15, 23, 42, 0.75) !important;
                 border: 1px solid rgba(255, 255, 255, 0.12) !important;
                 line-height: 1.15 !important;
+                z-index: 30 !important;
             }
 
             /* زر المدن في الجوال: مربع أنيق خفيف أسفل بوكس الوقت مباشرة */
@@ -919,6 +920,7 @@ const htmlContent = `<!DOCTYPE html>
                 padding: 0 !important;
                 border-radius: 3px !important;
                 transform: none !important;
+                z-index: 35 !important;
             }
 
             #btn-cities-toggle .icon-emoji {

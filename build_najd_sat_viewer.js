@@ -454,7 +454,8 @@ const htmlContent = `<!DOCTYPE html>
             pointer-events: none;
             z-index: 15;
             line-height: normal;
-            transition: opacity 0.25s ease;
+            transition: opacity 0.25s ease, transform 0.28s cubic-bezier(0.25, 1, 0.5, 1);
+            transform-origin: center center;
         }
 
         #cities-overlay-layer.cities-hidden {
@@ -1048,6 +1049,7 @@ const htmlContent = `<!DOCTYPE html>
     };
 
     const satImg = document.getElementById('satellite-image');
+    const citiesLayer = document.getElementById('cities-overlay-layer');
     const timeHud = document.getElementById('time-hud');
     const timeLabel = document.getElementById('time-label');
     const timelineSlider = document.getElementById('timeline-slider');
@@ -1260,6 +1262,9 @@ const htmlContent = `<!DOCTYPE html>
         if (currentPanY < -limitY) currentPanY = -limitY;
 
         satImg.style.transform = "scale(2.0) translate(" + (currentPanX / 2.0) + "px, " + (currentPanY / 2.0) + "px)";
+        if (citiesLayer) {
+            citiesLayer.style.transform = "scale(2.0) translate(" + (currentPanX / 2.0) + "px, " + (currentPanY / 2.0) + "px)";
+        }
     }
 
     satImg.addEventListener("touchstart", (e) => {
@@ -1274,6 +1279,7 @@ const htmlContent = `<!DOCTYPE html>
             if (isZoomed) {
                 isPanning = true;
                 satImg.style.transition = "none";
+                if (citiesLayer) citiesLayer.style.transition = "none";
             }
         }
     }, { passive: false });
@@ -1297,6 +1303,7 @@ const htmlContent = `<!DOCTYPE html>
         if (!isPanning) return;
         isPanning = false;
         satImg.style.transition = "transform 0.28s cubic-bezier(0.25, 1, 0.5, 1)";
+        if (citiesLayer) citiesLayer.style.transition = "transform 0.28s cubic-bezier(0.25, 1, 0.5, 1)";
     });
 
     satImg.addEventListener("click", (e) => {
@@ -1315,20 +1322,32 @@ const htmlContent = `<!DOCTYPE html>
             const touchRelX = e.clientX - (stageRect.left + stageRect.width / 2);
             const touchRelY = e.clientY - (stageRect.top + stageRect.height / 2);
             satImg.style.transformOrigin = "center center";
+            if (citiesLayer) citiesLayer.style.transformOrigin = "center center";
             currentPanX = -touchRelX;
             currentPanY = -touchRelY;
             satImg.style.transition = "transform 0.28s cubic-bezier(0.25, 1, 0.5, 1)";
+            if (citiesLayer) citiesLayer.style.transition = "transform 0.28s cubic-bezier(0.25, 1, 0.5, 1)";
             applyBoundedPan();
             satImg.classList.add("is-zoomed");
+            if (citiesLayer) citiesLayer.classList.add("is-zoomed");
             isZoomed = true;
         } else {
             // نقرة سريعة وخاطفة فقط هي التي تعيد الصورة لوضعها الطبيعي
             satImg.style.transition = "transform 0.28s cubic-bezier(0.25, 1, 0.5, 1)";
             satImg.style.transform = "scale(1.0) translate(0px, 0px)";
             satImg.classList.remove("is-zoomed");
+            if (citiesLayer) {
+                citiesLayer.style.transition = "transform 0.28s cubic-bezier(0.25, 1, 0.5, 1)";
+                citiesLayer.style.transform = "scale(1.0) translate(0px, 0px)";
+                citiesLayer.classList.remove("is-zoomed");
+            }
             setTimeout(() => {
                 satImg.style.transformOrigin = "center center";
                 satImg.style.transform = "";
+                if (citiesLayer) {
+                    citiesLayer.style.transformOrigin = "center center";
+                    citiesLayer.style.transform = "";
+                }
                 currentPanX = 0;
                 currentPanY = 0;
             }, 280);

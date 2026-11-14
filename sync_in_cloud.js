@@ -235,6 +235,12 @@ async function runCloudSync() {
     const { execSync } = require('child_process');
     execSync(`node "${path.join(__dirname, 'build_najd_sat_viewer.js')}"`, { stdio: 'inherit' });
     fs.copyFileSync(path.join(__dirname, 'viewer.html'), path.join(publicDir, 'index.html'));
+    if (fs.existsSync(path.join(__dirname, 'borders_layer.png'))) {
+        fs.copyFileSync(path.join(__dirname, 'borders_layer.png'), path.join(publicDir, 'borders_layer.png'));
+    }
+    if (fs.existsSync(path.join(__dirname, 'xq55.ttf'))) {
+        fs.copyFileSync(path.join(__dirname, 'xq55.ttf'), path.join(publicDir, 'xq55.ttf'));
+    }
 
     // الرفع لكلاودفلير
     const token = await getValidToken();

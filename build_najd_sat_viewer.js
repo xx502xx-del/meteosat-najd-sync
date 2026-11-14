@@ -462,7 +462,7 @@ const htmlContent = `<!DOCTYPE html>
             height: 100%;
             object-fit: fill;
             pointer-events: none;
-            z-index: 12;
+            z-index: 1; /* في الطبقة الخلفية داخل الحاوية */
             opacity: 0.45;
             transform-origin: 75% 50%;
             transform: scaleX(1.009);
@@ -495,6 +495,7 @@ const htmlContent = `<!DOCTYPE html>
             position: absolute;
             pointer-events: none;
             transform-origin: 0 0;
+            z-index: 20; /* تضمن ظهور النقط والمسميات فوق طبقة الحدود الشفافة بالكامل */
         }
 
         .city-node-item {

@@ -452,6 +452,22 @@ const htmlContent = `<!DOCTYPE html>
         }
 
         /* طبقة مسميات المدن المسقطة 100% بنظام النسب المئوية */
+        /* طبقة الحدود الجغرافية الشفافة (معايرة بدقة 101.1% وشفافية 45%) */
+        #borders-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            pointer-events: none;
+            z-index: 12;
+            opacity: 0.45;
+            transform-origin: 75% 50%;
+            transform: scaleX(1.011);
+            transition: opacity 0.25s ease;
+        }
+
         #cities-overlay-layer {
             position: absolute;
             top: 0;
@@ -468,6 +484,10 @@ const htmlContent = `<!DOCTYPE html>
         #cities-overlay-layer.cities-hidden {
             opacity: 0;
             pointer-events: none;
+        }
+
+        #cities-overlay-layer.cities-hidden #borders-layer {
+            opacity: 0;
         }
 
         .city-marker {
@@ -1034,8 +1054,10 @@ const htmlContent = `<!DOCTYPE html>
             <!-- The Image Element -->
             <img id="satellite-image" src="${initialImage}" alt="Najd Sat Feed">
 
-            <!-- طبقة مسميات المدن ونقطها المسقطة بدقة 100% -->
-            <div id="cities-overlay-layer"></div>
+            <!-- طبقة مسميات المدن ونقطها المسقطة بدقة 100% وبداخلها طبقة الحدود -->
+            <div id="cities-overlay-layer">
+                <img id="borders-layer" src="borders_layer.png" alt="Borders Overlay">
+            </div>
         </div>
     </main>
 
@@ -1572,7 +1594,18 @@ const htmlContent = `<!DOCTYPE html>
     let citiesVisible = true;
 
     if (citiesContainer) {
+        // الحفاظ على عنصر صورة الحدود بداخل طبقة المدن للتزامن التام
+        let bordersImgEl = document.getElementById('borders-layer');
         citiesContainer.innerHTML = '';
+        if (bordersImgEl) {
+            citiesContainer.appendChild(bordersImgEl);
+        } else {
+            bordersImgEl = document.createElement('img');
+            bordersImgEl.id = 'borders-layer';
+            bordersImgEl.src = 'borders_layer.png';
+            bordersImgEl.alt = 'Borders Overlay';
+            citiesContainer.appendChild(bordersImgEl);
+        }
         VERIFIED_CITIES.forEach(city => {
             const marker = document.createElement('div');
             marker.className = 'city-marker';

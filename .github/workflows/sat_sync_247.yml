@@ -25,8 +25,7 @@ jobs:
 
       - name: 📦 تثبيت مكتبات السحب وتأمين المتصفح المستقر
         run: |
-          npm init -y
-          npm install --no-audit --no-fund puppeteer
+          npm install --no-audit --no-fund puppeteer@24.43.1 || npm install --no-audit --no-fund puppeteer
 
       - name: 🌐 تنفيذ السحب السحابي وتحديث Cloudflare
         env:

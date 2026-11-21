@@ -89,6 +89,16 @@ if (nonaData.sat1 && nonaData.sat1.length > 0) {
             return t >= minUtc && t <= maxUtc;
         });
     });
+
+    // تطبيق الدمج الليلي الذكي (Night Hybrid Composite) للقمرين النهاريين sat2 و sat3
+    ['sat2', 'sat3'].forEach(satKey => {
+        const map = new Map();
+        (nonaData[satKey] || []).forEach(item => map.set(item.date + ' ' + item.time, item));
+        nonaData[satKey] = sat1List.map(s1Item => {
+            const key = s1Item.date + ' ' + s1Item.time;
+            return map.has(key) ? map.get(key) : s1Item;
+        });
+    });
 }
 
 fs.writeFileSync(path.join(__dirname, 'nona_manifest.json'), JSON.stringify(nonaData, null, 2));
@@ -1171,18 +1181,8 @@ const htmlContent = `<!DOCTYPE html>
             const list = nonaData[currentSat] || [];
             timelineSlider.max = Math.max(0, list.length - 1);
 
-            // مطابقة الفريم الجديد بنفس التوقيت الدقيق الذي كان يقف عنده المستخدم
-            let targetIndex = -1;
-            if (currentTimeStr) {
-                targetIndex = list.findIndex(f => (f.date + ' ' + f.time) === currentTimeStr);
-            }
-
-            // إذا تطابق نفس التوقيت ننتقل له فوراً، وإلا نحافظ على نفس رقم المؤشر الحالي
-            if (targetIndex !== -1) {
-                currentIndex = targetIndex;
-            } else {
-                currentIndex = Math.min(currentIndex, Math.max(0, list.length - 1));
-            }
+            // الانتقال الفوري والتلقائي إلى آخر تحديث حي للقمر المختار
+            currentIndex = Math.max(0, list.length - 1);
 
             showFrame(currentIndex);
             preloadSatImages(currentSat); // تفعيل الكاش الفوري للقمر الجديد

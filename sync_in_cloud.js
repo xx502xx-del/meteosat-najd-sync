@@ -237,6 +237,17 @@ async function runCloudSync() {
                     return t >= minUtc && t <= maxUtc;
                 });
             });
+
+            // 3. تطبيق الدمج الليلي الذكي (Night Hybrid Composite) للقمرين النهاريين sat2 و sat3
+            // ليواصلا التحديث 24/7 دون توقف بعد الغروب تماماً كما في موقع المصدر
+            ['sat2', 'sat3'].forEach(satKey => {
+                const map = new Map();
+                (localManifest[satKey] || []).forEach(item => map.set(item.date + ' ' + item.time, item));
+                localManifest[satKey] = sat1List.map(s1Item => {
+                    const key = s1Item.date + ' ' + s1Item.time;
+                    return map.has(key) ? map.get(key) : s1Item;
+                });
+            });
         }
 
         fs.writeFileSync(path.join(__dirname, 'nona_manifest.json'), JSON.stringify(localManifest, null, 2));

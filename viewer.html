@@ -1068,18 +1068,8 @@
             const list = nonaData[currentSat] || [];
             timelineSlider.max = Math.max(0, list.length - 1);
 
-            // مطابقة الفريم الجديد بنفس التوقيت الدقيق الذي كان يقف عنده المستخدم
-            let targetIndex = -1;
-            if (currentTimeStr) {
-                targetIndex = list.findIndex(f => (f.date + ' ' + f.time) === currentTimeStr);
-            }
-
-            // إذا تطابق نفس التوقيت ننتقل له فوراً، وإلا نحافظ على نفس رقم المؤشر الحالي
-            if (targetIndex !== -1) {
-                currentIndex = targetIndex;
-            } else {
-                currentIndex = Math.min(currentIndex, Math.max(0, list.length - 1));
-            }
+            // الانتقال الفوري والتلقائي إلى آخر تحديث حي للقمر المختار
+            currentIndex = Math.max(0, list.length - 1);
 
             showFrame(currentIndex);
             preloadSatImages(currentSat); // تفعيل الكاش الفوري للقمر الجديد

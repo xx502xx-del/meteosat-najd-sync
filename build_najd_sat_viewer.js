@@ -73,6 +73,24 @@ Object.keys(DIRS).forEach(k => {
     nonaData[k] = sorted.slice(-72);
 });
 
+// تطبيق الميزان الزمني الماستر الموحد وتطهير أي فريمات قديمة عالقة
+if (nonaData.sat1 && nonaData.sat1.length > 0) {
+    function getUtcFromFilename(f) {
+        const parts = path.basename(f).split('_');
+        return Date.UTC(parseInt(parts[1]), parseInt(parts[2]) - 1, parseInt(parts[3]), parseInt(parts[4]), parseInt(parts[5]));
+    }
+    const sat1List = nonaData.sat1;
+    const minUtc = getUtcFromFilename(sat1List[0].file);
+    const maxUtc = getUtcFromFilename(sat1List[sat1List.length - 1].file);
+
+    Object.keys(nonaData).forEach(k => {
+        nonaData[k] = nonaData[k].filter(item => {
+            const t = getUtcFromFilename(item.file);
+            return t >= minUtc && t <= maxUtc;
+        });
+    });
+}
+
 fs.writeFileSync(path.join(__dirname, 'nona_manifest.json'), JSON.stringify(nonaData, null, 2));
 const publicDir = path.join(__dirname, 'public');
 if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });

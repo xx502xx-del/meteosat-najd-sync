@@ -207,26 +207,37 @@ async function runCloudSync() {
     let localManifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'nona_manifest.json'), 'utf8'));
 
     if (onlineManifest) {
+        // 1. تجميع وترتيب كل قمر أولاً
         Object.keys(onlineManifest).forEach(satKey => {
             const onlineList = onlineManifest[satKey] || [];
             const currentList = localManifest[satKey] || [];
             const mergedMap = new Map();
 
-            // إضافة الفريمات السابقة (مع استبعاد أي ملف تالف معروف بحجمه)
-            onlineList.forEach(item => {
-                mergedMap.set(item.file, item);
-            });
-            // إضافة الفريمات الجديدة المكتشفة
-            currentList.forEach(item => {
-                mergedMap.set(item.file, item);
-            });
+            onlineList.forEach(item => mergedMap.set(item.file, item));
+            currentList.forEach(item => mergedMap.set(item.file, item));
 
-            // ترتيب الفريمات تصاعدياً بحسب الوقت
             const sorted = Array.from(mergedMap.values()).sort((a, b) => a.file.localeCompare(b.file));
-
-            // الاحتفاظ بأحدث 72 فريم كحد أقصى (12 ساعة كاملة بمعدل فريم كل 10 دقائق)
             localManifest[satKey] = sorted.slice(-72);
         });
+
+        // 2. تطبيق الميزان الزمني الماستر الموحد (Master Timeline Grid) المشتق من القمر الأساسي sat1
+        if (localManifest.sat1 && localManifest.sat1.length > 0) {
+            function getUtcFromFilename(f) {
+                const parts = path.basename(f).split('_');
+                return Date.UTC(parseInt(parts[1]), parseInt(parts[2]) - 1, parseInt(parts[3]), parseInt(parts[4]), parseInt(parts[5]));
+            }
+            const sat1List = localManifest.sat1;
+            const minUtc = getUtcFromFilename(sat1List[0].file);
+            const maxUtc = getUtcFromFilename(sat1List[sat1List.length - 1].file);
+
+            // تطهير واستبعاد أي ملف عالق من أيام سابقة خارج نافذة الـ 12 ساعة الحية
+            Object.keys(localManifest).forEach(satKey => {
+                localManifest[satKey] = localManifest[satKey].filter(item => {
+                    const t = getUtcFromFilename(item.file);
+                    return t >= minUtc && t <= maxUtc;
+                });
+            });
+        }
 
         fs.writeFileSync(path.join(__dirname, 'nona_manifest.json'), JSON.stringify(localManifest, null, 2));
         fs.writeFileSync(path.join(publicDir, 'nona_manifest.json'), JSON.stringify(localManifest));

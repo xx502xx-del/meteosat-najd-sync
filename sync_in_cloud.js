@@ -127,37 +127,48 @@ async function runCloudSync() {
             const filename = `sat_${cYyyy}_${cMm}_${cDd}_${cHh}_${cMin}_15518_${t.code}.jpg`;
             const destPath = path.join(t.dir, filename);
 
-            if (!fs.existsSync(destPath)) {
+            let isExistingValid = false;
+            if (fs.existsSync(destPath)) {
                 try {
-                    const b64 = await page.evaluate(async (url) => {
-                        try {
-                            const r = await fetch(url);
-                            if (r.status === 200) {
-                                const blob = await r.blob();
-                                if (blob.size > 8000) {
-                                    return new Promise(res => {
-                                        const fr = new FileReader();
-                                        fr.onloadend = () => res(fr.result.split(',')[1]);
-                                        fr.readAsDataURL(blob);
-                                    });
-                                }
-                            }
-                        } catch(e) {}
-                        return null;
-                    }, `https://${t.domain}.meteologix.com/images/data/cache/sat/${filename}`);
-
-                    if (b64) {
-                        const buf = Buffer.from(b64, 'base64');
-                        // التأكد القاطع أن الملف صورة حقيقية (JPEG أو PNG كقمر الضباب) وليس صفحة خطأ HTML
-                        const isJpeg = buf.length > 15000 && buf[0] === 0xFF && buf[1] === 0xD8 && buf[2] === 0xFF;
-                        const isPng = buf.length > 15000 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4E && buf[3] === 0x47;
-                        if (isJpeg || isPng) {
-                            fs.writeFileSync(destPath, buf);
-                            downloaded++;
-                            console.log(`✅ [سحابي] تم سحب واعتماد: ${filename}`);
-                        }
-                    }
+                    const st = fs.statSync(destPath);
+                    if (st.size > 15000) isExistingValid = true;
                 } catch(e) {}
+            }
+
+            if (!isExistingValid) {
+                // محاولة سحب فورية مع إعادة محاولة ذكية وسريعة لضمان عدم سقوط أي فريم من الـ 72
+                for (let attempt = 1; attempt <= 2; attempt++) {
+                    try {
+                        const b64 = await page.evaluate(async (url) => {
+                            try {
+                                const r = await fetch(url);
+                                if (r.status === 200) {
+                                    const blob = await r.blob();
+                                    if (blob.size > 8000) {
+                                        return new Promise(res => {
+                                            const fr = new FileReader();
+                                            fr.onloadend = () => res(fr.result.split(',')[1]);
+                                            fr.readAsDataURL(blob);
+                                        });
+                                    }
+                                }
+                            } catch(e) {}
+                            return null;
+                        }, `https://${t.domain}.meteologix.com/images/data/cache/sat/${filename}`);
+
+                        if (b64) {
+                            const buf = Buffer.from(b64, 'base64');
+                            const isJpeg = buf.length > 15000 && buf[0] === 0xFF && buf[1] === 0xD8 && buf[2] === 0xFF;
+                            const isPng = buf.length > 15000 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4E && buf[3] === 0x47;
+                            if (isJpeg || isPng) {
+                                fs.writeFileSync(destPath, buf);
+                                downloaded++;
+                                console.log(`✅ [سحابي] تم سحب واعتماد: ${filename}`);
+                                break;
+                            }
+                        }
+                    } catch(e) {}
+                }
             }
         }
     }
@@ -246,6 +257,24 @@ async function runCloudSync() {
                 localManifest[satKey] = sat1List.map(s1Item => {
                     const key = s1Item.date + ' ' + s1Item.time;
                     return map.has(key) ? map.get(key) : s1Item;
+                });
+            });
+
+            // 4. تأكيد السلامة الفيزيائية الصارمة 100%: التحقق من وجود الملف في مجلد public
+            // لا يُدرج أي فريم في المانيفست النهائي ما لم يكن ملفه موجوداً ومكتمل الحجم
+            Object.keys(localManifest).forEach(satKey => {
+                localManifest[satKey] = localManifest[satKey].filter(item => {
+                    const localPath = path.join(publicDir, item.file);
+                    if (fs.existsSync(localPath)) {
+                        try {
+                            const st = fs.statSync(localPath);
+                            return st.size > 15000;
+                        } catch(e) {
+                            return false;
+                        }
+                    }
+                    // إذا كان الملف معروفاً مسبقاً في Cloudflare (تم رفعه بنجاح في دورة سابقة)
+                    return existingFiles.has(path.basename(item.file));
                 });
             });
         }

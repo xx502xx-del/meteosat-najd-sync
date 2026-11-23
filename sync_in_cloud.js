@@ -260,8 +260,9 @@ async function runCloudSync() {
                 });
             });
 
-            // 4. تأكيد السلامة الفيزيائية الصارمة 100%: التحقق من وجود الملف في مجلد public
-            // لا يُدرج أي فريم في المانيفست النهائي ما لم يكن ملفه موجوداً ومكتمل الحجم
+            // 4. تأكيد السلامة الفيزيائية الصارمة 100%: التحقق من وجود الملف الفعلي على القرص
+            // لا يُدرج أي فريم في المانيفست النهائي ما لم يكن ملفه موجوداً ومكتمل الحجم (JPEG/PNG سليم)
+            // ويُمنع منعاً باتاً اعتماد أي ملف غير موجود في مجلد public المحلي
             Object.keys(localManifest).forEach(satKey => {
                 localManifest[satKey] = localManifest[satKey].filter(item => {
                     const localPath = path.join(publicDir, item.file);
@@ -273,8 +274,7 @@ async function runCloudSync() {
                             return false;
                         }
                     }
-                    // إذا كان الملف معروفاً مسبقاً في Cloudflare (تم رفعه بنجاح في دورة سابقة)
-                    return existingFiles.has(path.basename(item.file));
+                    return false;
                 });
             });
         }
